@@ -1,4 +1,4 @@
-.PHONY: clean_virtuoso
+.PHONY: clean_virtuoso import transform
 
 all: transform
 
@@ -14,16 +14,23 @@ fusekidump.nt.gz:
 	rm -f fusekidump.nt.gz
 	wget https://static.deichman.no/fusekidump.nt.gz
 
-
 clean_virtuoso:
 	$(call clear_graph,http://www.openlinksw.com/schemas/virtrdf#)
 	$(call clear_graph,http://www.w3.org/ns/ldp#)
 	$(call clear_graph,http://localhost:8890/sparql)
 	$(call clear_graph,http://localhost:8890/DAV/)
 	$(call clear_graph,http://www.w3.org/2002/07/owl#)
+	$(call clear_graph,old_deichman)
+	$(call clear_graph,new_deichman)
 
-import: fusekidump.nt.gz
-	docker cp ./fusekidump.nt.gz virtuoso:/data/
-	$(call import_graph,fusekidump.nt.gz,old_deichman)
+all.nt.gz: fusekidump.nt.gz
+	zcat fusekidump.nt.gz | grep -v "migration.deichman.no" | grep -v "deichman.no/raw" > all.nt
+	gzip all.nt
+
+import: all.nt.gz clean_virtuoso
+	docker cp ./all.nt.gz virtuoso:/data/
+	$(call import_graph,all.nt.gz,old_deichman)
+	docker cp ./resources.ttl virtuoso:/data/
+	$(call import_graph,resources.ttl,new_deichman)
 
 transform: import

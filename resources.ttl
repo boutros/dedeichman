@@ -1,0 +1,1698 @@
+<audience/adult> a <Audience> ;
+  <label> "Voksne"@no ;
+  <label> "Adults"@en .
+<audience/juvenile> a <Audience> ;
+  <label> "Barn og ungdom"@no ;
+  <label> "Juvenile"@en .
+<audience/ages0To2> a <Audience> ;
+  <label> "0-2 år"@no ;
+  <label> "0-2 years"@en .
+<audience/ages3To5> a <Audience> ;
+  <label> "3-5 år"@no ;
+  <label> "3-5 years"@en .
+<audience/ages6To8> a <Audience> ;
+  <label> "6-8 år"@no ;
+  <label> "6-8 years"@en .
+<audience/ages9To10> a <Audience> ;
+  <label> "9-10 år"@no ;
+  <label> "9-10 years"@en .
+<audience/ages11To12> a <Audience> ;
+  <label> "11-12 år"@no ;
+  <label> "11-12 years"@en .
+<audience/ages13To15> a <Audience> ;
+  <label> "13-15 år"@no ;
+  <label> "13-15 years"@en .
+
+<binding/innbundet> a <Binding> ;
+  <label> "Innbundet"@no ;
+  <label> "Hardback"@en .
+<binding/heftet> a <Binding> ;
+  <label> "Heftet"@no ;
+  <label> "Paperback"@en .
+<binding/spiralrygg> a <Binding> ;
+  <label> "Spiralrygg"@no ;
+  <label> "Spiral binding"@en .
+<biography/autobiography> a <Biography> ;
+  <label> "Selvbiografi"@no ;
+  <label> "Autobiography"@en .
+
+<biography/singleBiograpy> a <Biography> ;
+  <label> "Enkeltbiografi"@no ;
+  <label> "Single biography"@en .
+<biography/collectiveBiography> a <Biography> ;
+  <label> "Samlingsbiografi"@no ;
+  <label> "Collective biography"@en .
+<biography/biographicalContent> a <Biography> ;
+  <label> "Biografisk innhold"@no ;
+  <label> "Biographical content"@en .
+
+<cataloguingSource/Deichman> a <CataloguingSource> ;
+  <label> "Deichman"@no ;
+  <label> "Deichman"@en .
+<cataloguingSource/BS> a <CataloguingSource> ;
+  <label> "Biblioteksentralen"@no ;
+  <label> "Biblioteksentralen"@en .
+<cataloguingSource/DFB> a <CataloguingSource> ;
+  <label> "DFB"@no ;
+  <label> "DFB"@en .
+<cataloguingSource/Bokbasen> a <CataloguingSource> ;
+  <label> "Bokbasen"@no ;
+  <label> "Bokbasen"@en .
+
+<classificationSource/ddk5> a <ClassificationSource> ;
+  <label> "DDK 5"@en ;
+  <label> "DDK 5"@no .
+<classificationSource/ddk23> a <ClassificationSource> ;
+  <label> "DDK 23"@en ;
+  <label> "DDK 23"@no .
+<classificationSource/ddc22> a <ClassificationSource> ;
+  <label> "DDC 22"@en ;
+  <label> "DDC 22"@no .
+<classificationSource/ddc23> a <ClassificationSource> ;
+  <label> "DDC 23"@en ;
+  <label> "DDC 23"@no .
+<classificationSource/cdclass> a <ClassificationSource> ;
+  <label> "CD classification"@en ;
+  <label> "CD-klassifikasjon"@no .
+<classificationSource/dfb> a <ClassificationSource> ;
+  <label> "DFB"@en ;
+  <label> "DFB"@no .
+<classificationSource/oldMusicDewey> a <ClassificationSource> ;
+  <label> "Old music"@en ;
+  <label> "Gammel musikk"@no .
+
+<contentAdaptation/easyLanguage> a <ContentAdaptation> ;
+  <label> "Lettlest, enkelt språk"@no ;
+  <label> "Easy to read, easy language"@en .
+<contentAdaptation/easyContent> a <ContentAdaptation> ;
+  <label> "Lettlest, enkelt innhold"@no ;
+  <label> "Easy to read, easy content"@en .
+
+<fictionNonfiction/nonfiction> a <FictionNonFiction> ;
+  <label> "Fag"@no ;
+  <label> "Nonfiction"@en .
+<fictionNonfiction/fiction> a <FictionNonFiction> ;
+  <label> "Fiksjon"@no ;
+  <label> "Fiction"@en .
+
+<format/DVD> a <Format> ;
+  <label> "DVD"@no ;
+  <label> "DVD"@en .
+<format/Blu-ray> a <Format> ;
+  <label> "Blu-ray"@no ;
+  <label> "Blu-ray"@en .
+<format/3DMovie> a <Format> ;
+  <label> "3D-film"@no ;
+  <label> "3D movie"@en .
+<format/Videotape> a <Format> ;
+  <label> "VHS"@no ;
+  <label> "Videotape"@en .
+<format/CompactDisc> a <Format> ;
+  <label> "CD"@no ;
+  <label> "CD"@en .
+<format/MP3-CD> a <Format> ;
+  <label> "MP3-CD"@no ;
+  <label> "MP3-CD"@en .
+<format/GramophoneRecord> a <Format> ;
+  <label> "Vinylplate"@no ;
+  <label> "Vinyl record"@en .
+<format/CompactCassette> a <Format> ;
+  <label> "Kassett"@no ;
+  <label> "Cassette"@en .
+<format/CD-ROM> a <Format> ;
+  <label> "CD-ROM"@no ;
+  <label> "CD-ROM"@en .
+<format/DVD>-ROM a <Format> ;
+  <label> "DVD-ROM"@no ;
+  <label> "DVD-ROM"@en .
+<format/DigiBook> a <Format> ;
+  <label> "Digibok"@no ;
+  <label> "Digibook"@en .
+<format/DigiCard> a <Format> ;
+  <label> "Digikort"@no ;
+  <label> "Digicard"@en .
+<format/DAISY> a <Format> ;
+  <label> "DAISY"@no ;
+  <label> "DAISY"@en .
+<format/PDF> a <Format> ;
+  <label> "PDF"@no ;
+  <label> "PDF"@en .
+<format/EPUB> a <Format> ;
+  <label> "EPUB"@no ;
+  <label> "EPUB"@en .
+<format/NintendoDSGame> a <Format> ;
+  <label> "Nintendo DS-spill"@no ;
+  <label> "Nintendo DS game"@en .
+<format/Nintendo3DSGame> a <Format> ;
+  <label> "Nintendo 3DS-spill"@no ;
+  <label> "Nintendo 3DS game"@en .
+<format/NintendoWiiGame> a <Format> ;
+  <label> "Nintendo Wii-spill"@no ;
+  <label> "Nintendo Wii game"@en .
+<format/NintendoWiiUGame> a <Format> ;
+  <label> "Nintendo Wii U-spill"@no ;
+  <label> "Nintendo Wii U game"@en .
+<format/NintendoSwitchGame> a <Format> ;
+  <label> "Nintendo Switch-spill"@no ;
+  <label> "Nintendo Switch game"@en .
+<format/PersonalComputerGame> a <Format> ;
+  <label> "PC-spill"@no ;
+  <label> "PC game"@en .
+<format/Playstation2Game> a <Format> ;
+  <label> "Playstation 2-spill"@no ;
+  <label> "Playstation 2 game"@en .
+<format/Playstation3Game> a <Format> ;
+  <label> "Playstation 3-spill"@no ;
+  <label> "Playstation 3 game"@en .
+<format/Playstation4Game> a <Format> ;
+  <label> "Playstation 4-spill"@no ;
+  <label> "Playstation 4 game"@en .
+<format/XboxOneGame> a <Format> ;
+  <label> "Xbox One-spill"@no ;
+  <label> "Xbox One game"@en .
+<format/Xbox360Game> a <Format> ;
+  <label> "Xbox 360-spill"@no ;
+  <label> "Xbox 360 game"@en .
+<format/BoardGame> a <Format> ;
+  <label> "Brettspill"@no ;
+  <label> "Board Game"@en .
+<format/CardGame> a <Format> ;
+  <label> "Kortspill"@no ;
+  <label> "Card Game"@en .
+<format/Map> a <Format> ;
+  <label> "Kart"@no ;
+  <label> "Map"@en .
+<format/Diapositive> a <Format> ;
+  <label> "Dias"@no ;
+  <label> "Diapositive"@en .
+<format/MusicalInstrument> a <Format> ;
+  <label> "Musikkinstrument"@no ;
+  <label> "Musical instrument"@en .
+<format/BookAndAudiobook> a <Format> ;
+  <label> "Bok og lydbok"@no ;
+  <label> "Book and audiobook"@en .
+
+<formatAdaptation/largePrint> a <FormatAdaptation> ;
+  <label> "Storskrift"@no ;
+  <label> "Large print"@en .
+<formatAdaptation/braille> a <FormatAdaptation> ;
+  <label> "Blindeskrift"@no ;
+  <label> "Braille"@en .
+<formatAdaptation/signLanguage> a <FormatAdaptation> ;
+  <label> "Tegnspråk"@no ;
+  <label> "Sign language"@en .
+<formatAdaptation/tactile> a <FormatAdaptation> ;
+  <label> "Følebok"@no ;
+  <label> "Tactile"@en .
+<formatAdaptation/capitalLetters> a <FormatAdaptation> ;
+  <label> "Blokkbokstaver"@no ;
+  <label> "Capital letters only"@en .
+<formatAdaptation/signSupportedSpeech> a <FormatAdaptation> ;
+  <label> "Tegn-til-tale"@no ;
+  <label> "Sign supported speech"@en .
+
+<illustrativeMatter/illustrert> a <IllustrativeMatter> ;
+  <label> "Illustrert"@no ;
+  <label> "Illustration"@en .
+<illustrativeMatter/kolorerte_illustrasjoner> a <IllustrativeMatter> ;
+  <label> "Fargeillustrasjoner"@no ;
+  <label> "Colour illustrations"@en .
+<illustrativeMatter/kart> a <IllustrativeMatter> ;
+  <label> "Kart"@no ;
+  <label> "Map"@en .
+<illustrativeMatter/noter> a <IllustrativeMatter> ;
+  <label> "Noter"@no ;
+  <label> "Musical score"@en .
+<illustrativeMatter/portrett> a <IllustrativeMatter> ;
+  <label> "Portrett"@no ;
+  <label> "Portrait"@en .
+<illustrativeMatter/figur> a <IllustrativeMatter> ;
+  <label> "Figur"@no ;
+  <label> "Figure"@en .
+<illustrativeMatter/tabell> a <IllustrativeMatter> ;
+  <label> "Tabell"@no ;
+  <label> "Table"@en .
+<illustrativeMatter/plansje> a <IllustrativeMatter> ;
+  <label> "Plansje"@no ;
+  <label> "Plate"@en .
+
+<key/a_major> a <Key> ;
+  <label> "A-dur"@no ;
+  <label> "A major"@en .
+<key/a_minor> a <Key> ;
+  <label> "A-moll"@no ;
+  <label> "A minor"@en .
+<key/b_major> a <Key> ;
+  <label> "H-dur"@no ;
+  <label> "B major"@en .
+<key/b_minor> a <Key> ;
+  <label> "H-moll"@no ;
+  <label> "B minor"@en .
+<key/c_major> a <Key> ;
+  <label> "C-dur"@no ;
+  <label> "C major"@en .
+<key/c_minor> a <Key> ;
+  <label> "C-moll"@no ;
+  <label> "C minor"@en .
+<key/d_major> a <Key> ;
+  <label> "D-dur"@no ;
+  <label> "D major"@en .
+<key/d_minor> a <Key> ;
+  <label> "D-moll"@no ;
+  <label> "D minor"@en .
+<key/e_major> a <Key> ;
+  <label> "E-dur"@no ;
+  <label> "E major"@en .
+<key/e_minor> a <Key> ;
+  <label> "E-moll"@no ;
+  <label> "E minor"@en .
+<key/f_major> a <Key> ;
+  <label> "F-dur"@no ;
+  <label> "F major"@en .
+<key/f_minor> a <Key> ;
+  <label> "F-moll"@no ;
+  <label> "F minor"@en .
+<key/g_major> a <Key> ;
+  <label> "G-dur"@no ;
+  <label> "G major"@en .
+<key/g_minor> a <Key> ;
+  <label> "G-moll"@no ;
+  <label> "G minor"@en .
+<key/ab_major> a <Key> ;
+  <label> "A♭-dur"@no ;
+  <label> "A♭ major"@en .
+<key/ab_minor> a <Key> ;
+  <label> "A♭-moll"@no ;
+  <label> "A♭ minor"@en .
+<key/bb_major> a <Key> ;
+  <label> "B-dur"@no ;
+  <label> "B♭ major"@en .
+<key/bb_minor> a <Key> ;
+  <label> "B-moll"@no ;
+  <label> "B♭ minor"@en .
+<key/cb_major> a <Key> ;
+  <label> "C♭-dur"@no ;
+  <label> "C♭ major"@en .
+<key/cb_minor> a <Key> ;
+  <label> "C♭-moll"@no ;
+  <label> "C♭ minor"@en .
+<key/db_major> a <Key> ;
+  <label> "D♭-dur"@no ;
+  <label> "D♭ major"@en .
+<key/db_minor> a <Key> ;
+  <label> "D♭-moll"@no ;
+  <label> "D♭ minor"@en .
+<key/eb_major> a <Key> ;
+  <label> "E♭-dur"@no ;
+  <label> "E♭ major"@en .
+<key/eb_minor> a <Key> ;
+  <label> "E♭-moll"@no ;
+  <label> "E♭ minor"@en .
+<key/fb_major> a <Key> ;
+  <label> "F♭-dur"@no ;
+  <label> "F♭ major"@en .
+<key/fb_minor> a <Key> ;
+  <label> "F♭-moll"@no ;
+  <label> "F♭ minor"@en .
+<key/gb_major> a <Key> ;
+  <label> "G♭-dur"@no ;
+  <label> "G♭ major"@en .
+<key/gb_minor> a <Key> ;
+  <label> "G♭-moll"@no ;
+  <label> "G♭ minor"@en .
+<key/ax_major> a <Key> ;
+  <label> "A♯-dur"@no ;
+  <label> "A♯ major"@en .
+<key/ax_minor> a <Key> ;
+  <label> "A♯-moll"@no ;
+  <label> "A♯ minor"@en .
+<key/bx_major> a <Key> ;
+  <label> "H♯-dur"@no ;
+  <label> "B♯ major"@en .
+<key/bx_minor> a <Key> ;
+  <label> "H♯-moll"@no ;
+  <label> "B♯ minor"@en .
+<key/cx_major> a <Key> ;
+  <label> "C♯-dur"@no ;
+  <label> "C♯ major"@en .
+<key/cx_minor> a <Key> ;
+  <label> "C♯-moll"@no ;
+  <label> "C♯ minor"@en .
+<key/dx_major> a <Key> ;
+  <label> "D♯-dur"@no ;
+  <label> "D♯ major"@en .
+<key/dx_minor> a <Key> ;
+  <label> "D♯-moll"@no ;
+  <label> "D♯ minor"@en .
+<key/ex_major> a <Key> ;
+  <label> "E♯-dur"@no ;
+  <label> "E♯ major"@en .
+<key/ex_minor> a <Key> ;
+  <label> "E♯-moll"@no ;
+  <label> "E♯ minor"@en .
+<key/fx_major> a <Key> ;
+  <label> "F♯-dur"@no ;
+  <label> "F♯ major"@en .
+<key/fx_minor> a <Key> ;
+  <label> "F♯-moll"@no ;
+  <label> "F♯ minor"@en .
+<key/gx_major> a <Key> ;
+  <label> "G♯-dur"@no ;
+  <label> "G♯ major"@en .
+<key/gx_minor> a <Key> ;
+  <label> "G♯-moll"@no ;
+  <label> "G♯ minor"@en .
+
+<language/nob>  a <Language> ;
+  <label>  "Norsk (bokmål)"@no ;
+  <label>  "Norwegian Bokmål"@en .
+<language/nno>  a <Language> ;
+  <label>  "Norsk (nynorsk)"@no ;
+  <label>  "Norwegian Nynorsk"@en .
+<language/dan>  a <Language> ;
+  <label>  "Dansk"@no ;
+  <label>  "Danish"@en .
+<language/eng>  a <Language> ;
+  <label>  "Engelsk"@no ;
+  <label>  "English"@en .
+<language/swe>  a <Language> ;
+  <label>  "Svensk"@no ;
+  <label>  "Swedish"@en .
+  <language/afr>  a <Language> ;
+  <label>  "Afrikaans"@no ;
+  <label>  "Afrikaans"@en .
+  <language/sia>  a <Language> ;
+  <label>  "Akkalasamisk"@no ;
+  <label>  "Akkala Sami"@en .
+<language/alb>  a <Language> ;
+  <label>  "Albansk"@no ;
+  <label>  "Albanian"@en .
+<language/amh>  a <Language> ;
+  <label>  "Amharisk"@no ;
+  <label>  "Amharic"@en .
+<language/ara>  a <Language> ;
+  <label>  "Arabisk"@no ;
+  <label>  "Arabic"@en .
+<language/arm>  a <Language> ;
+  <label>  "Armensk"@no ;
+  <label>  "Armenian"@en .
+<language/aze>  a <Language> ;
+  <label>  "Aserbajdsjansk"@no ;
+  <label>  "Azerbaijani"@en .
+<language/bam>  a <Language> ;
+  <label>  "Bambara"@no ;
+  <label>  "Bambara"@en .
+<language/baq>  a <Language> ;
+  <label>  "Baskisk"@no ;
+  <label>  "Basque"@en .
+<language/ben>  a <Language> ;
+  <label>  "Bengali"@no ;
+  <label>  "Bengali"@en .
+<language/bos>  a <Language> ;
+  <label>  "Bosnisk"@no ;
+  <label>  "Bosnian"@en .
+<language/bul>  a <Language> ;
+  <label>  "Bulgarsk"@no ;
+  <label>  "Bulgarian"@en .
+<language/bur>  a <Language> ;
+  <label>  "Burmansk"@no ;
+  <label>  "Burmese"@en .
+<language/ceb>  a <Language> ;
+  <label>  "Cebuano"@no ;
+  <label>  "Cebuano"@en .
+<language/prs>  a <Language> ;
+  <label>  "Dari"@no ;
+  <label>  "Dari"@en .
+<language/din>  a <Language> ;
+  <label>  "Dinka"@no ;
+  <label>  "Dinka"@en .
+<language/dua>  a <Language> ;
+  <label>  "Duala"@no ;
+  <label>  "Duala"@en .
+  <language/dyu>  a <Language> ;
+  <label>  "Dyula"@no ;
+  <label>  "Dyula"@en .
+<language/egy>  a <Language> ;
+  <label>  "Egyptisk"@no ;
+  <label>  "Egyptian"@en .
+<language/epo>  a <Language> ;
+  <label>  "Esperanto"@no ;
+  <label>  "Esperanto"@en .
+<language/est>  a <Language> ;
+  <label>  "Estisk"@no ;
+  <label>  "Estonian"@en .
+<language/per>  a <Language> ;
+  <label>  "Farsi"@no ;
+  <label>  "Persian"@en .
+<language/fin>  a <Language> ;
+  <label>  "Finsk"@no ;
+  <label>  "Finnish"@en .
+<language/fre>  a <Language> ;
+  <label>  "Fransk"@no ;
+  <label>  "French"@en .
+<language/fao>  a <Language> ;
+  <label>  "Færøysk"@no ;
+  <label>  "Faroese"@en .
+<language/glg>  a <Language> ;
+  <label>  "Galisisk"@no ;
+  <label>  "Galician"@en .
+<language/grc>  a <Language> ;
+  <label>  "Gammelgresk"@no ;
+  <label>  "Ancient Greek"@en .
+<language/syc>  a <Language> ;
+  <label>  "Gammelsyrisk"@no ;
+  <label>  "Classical Syriac"@en .
+<language/geo>  a <Language> ;
+  <label>  "Georgisk"@no ;
+  <label>  "Georgian"@en .
+<language/gre>  a <Language> ;
+  <label>  "Gresk"@no ;
+  <label>  "Greek"@en .
+<language/kal>  a <Language> ;
+  <label>  "Grønlandsk"@no ;
+  <label>  "Greenlandic"@en .
+<language/guj>  a <Language> ;
+  <label>  "Gujarati"@no ;
+  <label>  "Gujarati"@en .
+<language/hau>  a <Language> ;
+  <label>  "Hausa"@no ;
+  <label>  "Hausa"@en .
+<language/heb>  a <Language> ;
+  <label>  "Hebraisk"@no ;
+  <label>  "Hebrew"@en .
+<language/hil>  a <Language> ;
+  <label>  "Hiligaynon"@no ;
+  <label>  "Hiligaynon"@en .
+<language/hin>  a <Language> ;
+  <label>  "Hindi"@no ;
+  <label>  "Hindi"@en .
+<language/bel>  a <Language> ;
+  <label>  "Hviterussisk"@no ;
+  <label>  "Belarusian"@en .
+<language/ibo>  a <Language> ;
+  <label>  "Ibo"@no ;
+  <label>  "Igbo"@en .
+  <language/ilo>  a <Language> ;
+  <label>  "Iloko"@no ;
+  <label>  "Iloko"@en .
+<language/smn>  a <Language> ;
+  <label>  "Inarisamisk"@no ;
+  <label>  "Inari Sami"@en .
+<language/ind>  a <Language> ;
+  <label>  "Indonesisk"@no ;
+  <label>  "Indonesian"@en .
+<language/iku>  a <Language> ;
+  <label>  "Inuittisk"@no ;
+  <label>  "Inuktitut"@en .
+<language/gle>  a <Language> ;
+  <label>  "Irsk"@no ;
+  <label>  "Irish"@en .
+<language/ice>  a <Language> ;
+  <label>  "Islandsk"@no ;
+  <label>  "Icelandic"@en .
+<language/ita>  a <Language> ;
+  <label>  "Italiensk"@no ;
+  <label>  "Italian"@en .
+<language/jpn>  a <Language> ;
+  <label>  "Japansk"@no ;
+  <label>  "Japanese"@en .
+<language/yid>  a <Language> ;
+  <label>  "Jiddisch"@no ;
+  <label>  "Yiddish"@en .
+<language/yor>  a <Language> ;
+  <label>  "Joruba"@no ;
+  <label>  "Yoruba"@en .
+<language/kan>  a <Language> ;
+  <label>  "Kannada"@no ;
+  <label>  "Kannada"@en .
+<language/kaz>  a <Language> ;
+  <label>  "Kasakhisk"@no ;
+  <label>  "Kazakh"@en .
+<language/cat>  a <Language> ;
+  <label>  "Katalansk"@no ;
+  <label>  "Catalan"@en .
+  <language/sjk>  a <Language> ;
+  <label>  "Kemisamisk"@no ;
+  <label>  "Kemi Sami"@en .
+<language/cam>  a <Language> ;
+  <label>  "Khmer"@no ;
+  <label>  "Khmer"@en .
+  <language/sjd>  a <Language> ;
+  <label>  "Kildinsamisk"@no ;
+  <label>  "Kildin Sami"@en .
+<language/chi>  a <Language> ;
+  <label>  "Kinesisk"@no ;
+  <label>  "Chinese"@en .
+<language/kor>  a <Language> ;
+  <label>  "Koreansk"@no ;
+  <label>  "Korean"@en .
+<language/hrv>  a <Language> ;
+  <label>  "Kroatisk"@no ;
+  <label>  "Croatian"@en .
+<language/kur>  a <Language> ;
+  <label>  "Kurdisk"@no ;
+  <label>  "Kurdish"@en .
+<language/kmr>  a <Language> ;
+  <label>  "Kurdisk (kurmandji)"@no ;
+  <label>  "Kurdish (Kurmanji)"@en .
+<language/ckb>  a <Language> ;
+  <label>  "Kurdisk (sorani)"@no ;
+  <label>  "Kurdish (Sorani)"@en .
+<language/fkv>  a <Language> ;
+  <label>  "Kvensk"@no ;
+  <label>  "Kven"@en .
+<language/lao>  a <Language> ;
+  <label>  "Laotisk"@no ;
+  <label>  "Lao"@en .
+<language/lat>  a <Language> ;
+  <label>  "Latin"@no ;
+  <label>  "Latin"@en .
+<language/lav>  a <Language> ;
+  <label>  "Latvisk"@no ;
+  <label>  "Latvian"@en .
+<language/lin>  a <Language> ;
+  <label>  "Lingala"@no ;
+  <label>  "Lingala"@en .
+<language/lit>  a <Language> ;
+  <label>  "Litauisk"@no ;
+  <label>  "Lithuanian"@en .
+<language/smj>  a <Language> ;
+  <label>  "Lulesamisk"@no ;
+  <label>  "Lule Sami"@en .
+<language/luo>  a <Language> ;
+  <label>  "Luo"@no ;
+  <label>  "Luo"@en .
+<language/mac>  a <Language> ;
+  <label>  "Makedonsk"@no ;
+  <label>  "Macedonian"@en .
+<language/mlg>  a <Language> ;
+  <label>  "Madagassisk"@no ;
+  <label>  "Malagasy"@en .
+<language/mal>  a <Language> ;
+  <label>  "Malayalam"@no ;
+  <label>  "Malayalam"@en .
+<language/may>  a <Language> ;
+  <label>  "Malayisk"@no ;
+  <label>  "Malay"@en .
+<language/mlt>  a <Language> ;
+  <label>  "Maltesisk"@no ;
+  <label>  "Maltese"@en .
+<language/mnk>  a <Language> ;
+  <label>  "Mandinka"@no ;
+  <label>  "Mandinka"@en .
+<language/mri>  a <Language> ;
+  <label>  "Maori"@no ;
+  <label>  "Maori"@en .
+<language/mar>  a <Language> ;
+  <label>  "Marathi"@no ;
+  <label>  "Marathi"@en .
+<language/myn>  a <Language> ;
+  <label>  "Maya"@no ;
+  <label>  "Mayan"@en .
+<language/mon>  a <Language> ;
+  <label>  "Mongolsk"@no ;
+  <label>  "Mongolian"@en .
+<language/mos>  a <Language> ;
+  <label>  "Mossisk"@no ;
+  <label>  "Mossi"@en .
+<language/dut>  a <Language> ;
+  <label>  "Nederlandsk"@no ;
+  <label>  "Dutch"@en .
+<language/nep>  a <Language> ;
+  <label>  "Nepali"@no ;
+  <label>  "Nepali"@en .
+<language/nic>  a <Language> ;
+  <label>  "Niger-Kongospråk"@no ;
+  <label>  "Niger-Congo languages"@en .
+<language/sme>  a <Language> ;
+  <label>  "Nordsamisk"@no ;
+  <label>  "Northern Sami"@en .
+<language/nso>  a <Language> ;
+  <label>  "Nordsotho"@no ;
+  <label>  "Northern Sotho"@en .
+<language/non>  a <Language> ;
+  <label>  "Norrønt"@no ;
+  <label>  "Old Norse"@en .
+<language/nor>  a <Language> ;
+  <label>  "Norsk"@no ;
+  <label>  "Norwegian"@en .
+<language/nya>  a <Language> ;
+  <label>  "Nyanja"@no ;
+  <label>  "Nyanja"@en .
+<language/orm>  a <Language> ;
+  <label>  "Oromo"@no ;
+  <label>  "Oromo"@en .
+<language/pam>  a <Language> ;
+  <label>  "Pampanga"@no ;
+  <label>  "Pampanga"@en .
+<language/pan>  a <Language> ;
+  <label>  "Panjabi"@no ;
+  <label>  "Panjabi"@en .
+<language/pus>  a <Language> ;
+  <label>  "Pashto"@no ;
+  <label>  "Pushto"@en .
+<language/sje>  a <Language> ;
+  <label>  "Pitesamisk"@no ;
+  <label>  "Pite Sami"@en .
+<language/pol>  a <Language> ;
+  <label>  "Polsk"@no ;
+  <label>  "Polish"@en .
+<language/por>  a <Language> ;
+  <label>  "Portugisisk"@no ;
+  <label>  "Portuguese"@en .
+<language/que>  a <Language> ;
+  <label>  "Quechua"@no ;
+  <label>  "Quechua"@en .
+<language/roh>  a <Language> ;
+  <label>  "Retoromansk"@no ;
+  <label>  "Romansh"@en .
+<language/rom>  a <Language> ;
+  <label>  "Romani"@no ;
+  <label>  "Romani"@en .
+<language/rum>  a <Language> ;
+  <label>  "Rumensk"@no ;
+  <label>  "Romanian"@en .
+<language/rus>  a <Language> ;
+  <label>  "Russisk"@no ;
+  <label>  "Russian"@en .
+<language/smi>  a <Language> ;
+  <label>  "Samisk"@no ;
+  <label>  "Sami"@en .
+<language/san>  a <Language> ;
+  <label>  "Sanskrit"@no ;
+  <label>  "Sanskrit"@en .
+<language/srp>  a <Language> ;
+  <label>  "Serbisk"@no ;
+  <label>  "Serbian"@en .
+<language/sna>  a <Language> ;
+  <label>  "Shona"@no ;
+  <label>  "Shona"@en .
+<language/sin>  a <Language> ;
+  <label>  "Singalesisk"@no ;
+  <label>  "Sinhala"@en .
+<language/sms>  a <Language> ;
+  <label>  "Skoltesamisk"@no ;
+  <label>  "Skolt Sami"@en .
+<language/sco>  a <Language> ;
+  <label>  "Skotsk"@no ;
+  <label>  "Scots"@en .
+<language/gla>  a <Language> ;
+  <label>  "Skotsk-gælisk"@no ;
+  <label>  "Gaelic"@en .
+<language/slo>  a <Language> ;
+  <label>  "Slovakisk"@no ;
+  <label>  "Slovak"@en .
+<language/slv>  a <Language> ;
+  <label>  "Slovensk"@no ;
+  <label>  "Slovene"@en .
+<language/som>  a <Language> ;
+  <label>  "Somali"@no ;
+  <label>  "Somali"@en .
+<language/sot>  a <Language> ;
+  <label>  "Sotho"@no ;
+  <label>  "Sotho"@en .
+<language/spa>  a <Language> ;
+  <label>  "Spansk"@no ;
+  <label>  "Spanish"@en .
+<language/swa>  a <Language> ;
+  <label>  "Swahili"@no ;
+  <label>  "Swahili"@en .
+<language/sma>  a <Language> ;
+  <label>  "Sørsamisk"@no ;
+  <label>  "Southern Sami"@en .
+<language/tgl>  a <Language> ;
+  <label>  "Tagalog"@no ;
+  <label>  "Tagalog"@en .
+<language/tgk>  a <Language> ;
+  <label>  "Tadsjikisk"@no ;
+  <label>  "Tajik"@en .
+<language/tam>  a <Language> ;
+  <label>  "Tamil"@no ;
+  <label>  "Tamil"@en .
+<language/sgn>  a <Language> ;
+  <label>  "Tegnspråk"@no ;
+  <label>  "Sign language"@en .
+<language/tel>  a <Language> ;
+  <label>  "Telugu"@no ;
+  <label>  "Telugu"@en .
+<language/sjt>  a <Language> ;
+  <label>  "Tersamisk"@no ;
+  <label>  "Ter Sami"@en .
+<language/tet>  a <Language> ;
+  <label>  "Tetum"@no ;
+  <label>  "Tetum"@en .
+<language/tha>  a <Language> ;
+  <label>  "Thai"@no ;
+  <label>  "Thai"@en .
+<language/tib>  a <Language> ;
+  <label>  "Tibetansk"@no ;
+  <label>  "Tibetan"@en .
+<language/tig>  a <Language> ;
+  <label>  "Tigré"@no ;
+  <label>  "Tigre"@en .
+<language/tir>  a <Language> ;
+  <label>  "Tigrinja"@no ;
+  <label>  "Tigrinya"@en .
+<language/cze>  a <Language> ;
+  <label>  "Tsjekkisk"@no ;
+  <label>  "Czech"@en .
+<language/che>  a <Language> ;
+  <label>  "Tsjetsjensk"@no ;
+  <label>  "Chechen"@en .
+<language/tso>  a <Language> ;
+  <label>  "Tsonga"@no ;
+  <label>  "Tsonga"@en .
+<language/tuk>  a <Language> ;
+  <label>  "Turkmensk"@no ;
+  <label>  "Turkmen"@en .
+<language/twi>  a <Language> ;
+  <label>  "Twi"@no ;
+  <label>  "Twi"@en .
+<language/tur>  a <Language> ;
+  <label>  "Tyrkisk"@no ;
+  <label>  "Turkish"@en .
+<language/ger>  a <Language> ;
+  <label>  "Tysk"@no ;
+  <label>  "German"@en .
+<language/ukr>  a <Language> ;
+  <label>  "Ukrainsk"@no ;
+  <label>  "Ukrainian"@en .
+<language/sju>  a <Language> ;
+  <label>  "Umesamisk"@no ;
+  <label>  "Ume Sami"@en .
+<language/hun>  a <Language> ;
+  <label>  "Ungarsk"@no ;
+  <label>  "Hungarian"@en .
+<language/urd>  a <Language> ;
+  <label>  "Urdu"@no ;
+  <label>  "Urdu"@en .
+<language/uzb>  a <Language> ;
+  <label>  "Usbekisk"@no ;
+  <label>  "Uzbek"@en .
+<language/vie>  a <Language> ;
+  <label>  "Vietnamesisk"@no ;
+  <label>  "Vietnamese"@en .
+<language/vol>  a <Language> ;
+  <label>  "Volapyk"@no ;
+  <label>  "Volapük"@en .
+<language/wel>  a <Language> ;
+  <label>  "Walisisk"@no ;
+  <label>  "Welsh"@en .
+<language/wol>  a <Language> ;
+  <label>  "Wolof"@no ;
+  <label>  "Wolof"@en .
+<language/xho>  a <Language> ;
+  <label>  "Xhosa"@no ;
+  <label>  "Xhosa"@en .
+<language/zza>  a <Language> ;
+  <label>  "Zazaki"@no ;
+  <label>  "Zazaki"@en .
+<language/zul>  a <Language> ;
+  <label>  "Zulu"@no ;
+  <label>  "Zulu"@en .
+<language/pli>  a <Language> ;
+  <label>  "Pali"@no ;
+  <label>  "Pali"@en .
+<language/sux>  a <Language> ;
+  <label>  "Sumerisk"@no ;
+  <label>  "Sumerian"@en .
+<language/kik>  a <Language> ;
+  <label>  "Kikuyu"@no ;
+  <label>  "Kikuyu"@en .
+<language/ful>  a <Language> ;
+  <label>  "Fulani"@no ;
+  <label>  "Fula"@en .
+<language/akk>  a <Language> ;
+  <label>  "Akkadisk"@no ;
+  <label>  "Akkadian"@en .
+<language/gez>  a <Language> ;
+  <label>  "Ge'ez"@no ;
+  <label>  "Ge'ez"@en .
+<language/arc>  a <Language> ;
+  <label>  "Arameisk"@no ;
+  <label>  "Aramaic"@en .
+<language/yue>  a <Language> ;
+  <label>  "Kantonesisk"@no ;
+  <label>  "Cantonese"@en .
+<language/ing> a <Language> ;
+  <label>  "Ingen"@no ;
+  <label>  "None"@en .
+
+<literaryForm/novel> a <LiteraryForm>;
+  <label> "Roman"@no ;
+  <label> "Novel"@en .
+<literaryForm/shortProse> a <LiteraryForm>;
+  <label> "Kortprosa"@no ;
+  <label> "Short prose"@en .
+<literaryForm/shortStory> a <LiteraryForm>;
+  <label> "Noveller/fortellinger"@no ;
+  <label> "Short story"@en .
+<literaryForm/essay> a <LiteraryForm>;
+  <label> "Essay"@no ;
+  <label> "Essay"@en .
+<literaryForm/poetry> a <LiteraryForm>;
+  <label> "Dikt"@no ;
+  <label> "Poem"@en .
+<literaryForm/drama> a <LiteraryForm>;
+  <label> "Skuespill"@no ;
+  <label> "Drama"@en .
+<literaryForm/comicBook> a <LiteraryForm>;
+  <label> "Tegneserie"@no ;
+  <label> "Comic book"@en .
+<literaryForm/anthology> a <LiteraryForm>;
+  <label> "Antologi"@no ;
+  <label> "Anthology"@en .
+<literaryForm/textBook> a <LiteraryForm>;
+  <label> "Lærebok"@no ;
+  <label> "Text book"@en .
+<literaryForm/pointingBook> a <LiteraryForm>;
+  <label> "Pekebok"@no ;
+  <label> "Pointing book"@en .
+<literaryForm/pictureBook> a <LiteraryForm>;
+  <label> "Bildebok"@no ;
+  <label> "Picture book"@en .
+<literaryForm/dictionary> a <LiteraryForm>;
+  <label> "Ordbok"@no ;
+  <label> "Dictionary"@en .
+<literaryForm/referenceWork> a <LiteraryForm>;
+  <label> "Oppslagsverk"@no ;
+  <label> "Reference Work"@en .
+<literaryForm/biography> a <LiteraryForm>;
+  <label> "Biografi"@no ;
+  <label> "Biography"@en .
+<literaryForm/featureFilm> a <LiteraryForm>;
+  <label> "Spillefilm"@no ;
+  <label> "Feature film"@en .
+<literaryForm/animatedFilm> a <LiteraryForm>;
+  <label> "Animasjonsfilm"@no ;
+  <label> "Animated film"@en .
+<literaryForm/televisionSeries> a <LiteraryForm>;
+  <label> "TV-serie"@no ;
+  <label> "TV series"@en .
+<literaryForm/shortFilm> a <LiteraryForm>;
+  <label> "Kortfilm"@no ;
+  <label> "Short film"@en .
+<literaryForm/exerciseBook> a <LiteraryForm>;
+  <label> "Oppgavebok"@no ;
+  <label> "Exercise book"@en .
+<literaryForm/statistics> a <LiteraryForm>;
+  <label> "Statistikk"@no ;
+  <label> "Statistics"@en .
+
+<mediaType/Book> a <MediaType> ;
+  <label> "Bok"@no ;
+  <label> "Book"@en .
+<mediaType/E-book> a <MediaType> ;
+  <label> "E-bok"@no ;
+  <label> "E-book"@en .
+<mediaType/Audiobook> a <MediaType> ;
+  <label> "Lydbok"@no ;
+  <label> "Audiobook"@en .
+<mediaType/ComicBook> a <MediaType> ;
+  <label> "Tegneserie"@no ;
+  <label> "Comic book"@en .
+<mediaType/LanguageCourse> a <MediaType> ;
+  <label> "Språkkurs"@no ;
+  <label> "Language course"@en .
+<mediaType/Film> a <MediaType> ;
+  <label> "Film"@no ;
+  <label> "Film"@en .
+<mediaType/MusicRecording> a <MediaType> ;
+  <label> "Musikkopptak"@no ;
+  <label> "Music record"@en .
+<mediaType/SheetMusic> a <MediaType> ;
+  <label> "Noter"@no ;
+  <label> "Sheet music"@en .
+<mediaType/Game> a <MediaType> ;
+  <label> "Spill"@no ;
+  <label> "Game"@en .
+<mediaType/Other> a <MediaType> ;
+  <label> "Andre"@no ;
+  <label> "Other"@en .
+<mediaType/Periodical> a <MediaType> ;
+  <label> "Periodika"@no ;
+  <label> "Periodical"@en .
+
+<nationality/aborig> a <Nationality> ;
+  <label>  "Aboriginsk"@no ;
+  <label>  "Aboriginal Australian"@en .
+<nationality/afg> a <Nationality> ;
+  <label>  "Afghanistan"@no ;
+  <label>  "Afghanistan"@en .
+<nationality/afr> a <Nationality> ;
+  <label>  "Afrikansk"@no ;
+  <label>  "African"@en .
+<nationality/alb> a <Nationality> ;
+  <label>  "Albania"@no ;
+  <label>  "Albania"@en .
+<nationality/alg> a <Nationality> ;
+  <label>  "Algerie"@no ;
+  <label>  "Algeria"@en .
+<nationality/am> a <Nationality> ;
+  <label>  "USA"@no ;
+  <label>  "USA"@en .
+  <nationality/andor> a <Nationality> ;
+  <label>  "Andorra"@no ;
+  <label>  "Andorra"@en .
+<nationality/angol> a <Nationality> ;
+  <label>  "Angola"@no ;
+  <label>  "Angola"@en .
+<nationality/antig> a <Nationality> ;
+  <label>  "Antigua-Barbuda"@no ;
+  <label>  "Antigua-Barbuda"@en .
+<nationality/arab> a <Nationality> ;
+  <label>  "Arabisk"@no ;
+  <label>  "Arab"@en .
+<nationality/argen> a <Nationality> ;
+  <label>  "Argentina"@no ;
+  <label>  "Argentina"@en .
+<nationality/arm> a <Nationality> ;
+  <label>  "Armenia"@no ;
+  <label>  "Armenia"@en .
+<nationality/aserb> a <Nationality> ;
+  <label>  "Aserbajdsjan"@no ;
+  <label>  "Azerbaijan"@en .
+<nationality/au> a <Nationality> ;
+  <label>  "Australia"@no ;
+  <label>  "Australia"@en .
+<nationality/babyl> a <Nationality> ;
+  <label>  "Babylonsk"@no ;
+  <label>  "Babylonian"@en .
+<nationality/baham> a <Nationality> ;
+  <label>  "Bahamas"@no ;
+  <label>  "Bahamas"@en .
+<nationality/bahr> a <Nationality> ;
+  <label>  "Bahrain"@no ;
+  <label>  "Bahrain"@en .
+<nationality/bangl> a <Nationality> ;
+  <label>  "Bangladesh"@no ;
+  <label>  "Bangladesh"@en .
+<nationality/barb> a <Nationality> ;
+  <label>  "Barbados"@no ;
+  <label>  "Barbados"@en .
+<nationality/belg> a <Nationality> ;
+  <label>  "Belgia"@no ;
+  <label>  "Belgium"@en .
+<nationality/beliz> a <Nationality> ;
+  <label>  "Belize"@no ;
+  <label>  "Belize"@en .
+<nationality/benin> a <Nationality> ;
+  <label>  "Benin"@no ;
+  <label>  "Benin"@en .
+<nationality/bhut> a <Nationality> ;
+  <label>  "Bhutan"@no ;
+  <label>  "Bhutan"@en .
+<nationality/boliv> a <Nationality> ;
+  <label>  "Bolivia"@no ;
+  <label>  "Bolivia"@en .
+<nationality/bosn> a <Nationality> ;
+  <label>  "Bosnia-Hercegovina"@no ;
+  <label>  "Bosnia-Herzegovina"@en .
+<nationality/botsw> a <Nationality> ;
+  <label>  "Botswana"@no ;
+  <label>  "Botswana"@en .
+<nationality/bras> a <Nationality> ;
+  <label>  "Brasil"@no ;
+  <label>  "Brazil"@en .
+<nationality/brun> a <Nationality> ;
+  <label>  "Brunei"@no ;
+  <label>  "Brunei"@en .
+<nationality/bulg> a <Nationality> ;
+  <label>  "Bulgaria"@no ;
+  <label>  "Bulgaria"@en .
+<nationality/burkin> a <Nationality> ;
+  <label>  "Burkina Faso"@no ;
+  <label>  "Burkina Faso"@en .
+<nationality/burm> a <Nationality> ;
+  <label>  "Myanmar"@no ;
+  <label>  "Myanmar"@en .
+<nationality/burund> a <Nationality> ;
+  <label>  "Burundi"@no ;
+  <label>  "Burundi"@en .
+<nationality/cat> a <Nationality> ;
+  <label>  "Katalansk"@no ;
+  <label>  "Catalan"@en .
+<nationality/chil> a <Nationality> ;
+  <label>  "Chile"@no ;
+  <label>  "Chile"@en .
+<nationality/colomb> a <Nationality> ;
+  <label>  "Colombia"@no ;
+  <label>  "Colombia"@en .
+<nationality/costaric> a <Nationality> ;
+  <label>  "Costa Rica"@no ;
+  <label>  "Costa Rica"@en .
+<nationality/cub> a <Nationality> ;
+  <label>  "Cuba"@no ;
+  <label>  "Cuba"@en .
+<nationality/d> a <Nationality> ;
+  <label>  "Danmark"@no ;
+  <label>  "Denmark"@en .
+<nationality/dominik> a <Nationality> ;
+  <label>  "Dominikanske republikk"@no ;
+  <label>  "Dominican republic"@en .
+<nationality/ecuad> a <Nationality> ;
+  <label>  "Ecuador"@no ;
+  <label>  "Ecuador"@en .
+<nationality/egypt> a <Nationality> ;
+  <label>  "Egypt"@no ;
+  <label>  "Egypt"@en .
+<nationality/emiratarab> a <Nationality> ;
+  <label>  "Forente arabiske emirater"@no ;
+  <label>  "United Arab emirates"@en .
+<nationality/eng> a <Nationality> ;
+  <label>  "England"@no ;
+  <label>  "England"@en .
+<nationality/eritr> a <Nationality> ;
+  <label>  "Eritrea"@no ;
+  <label>  "Eritrea"@en .
+<nationality/est> a <Nationality> ;
+  <label>  "Estland"@no ;
+  <label>  "Estonia"@en .
+<nationality/etiop> a <Nationality> ;
+  <label>  "Etiopia"@no ;
+  <label>  "Ethiopia"@en .
+<nationality/fi> a <Nationality> ;
+  <label>  "Finland"@no ;
+  <label>  "Finland"@en .
+<nationality/filip> a <Nationality> ;
+  <label>  "Filippinene"@no ;
+  <label>  "Philippines"@en .
+<nationality/fr> a <Nationality> ;
+  <label>  "Frankrike"@no ;
+  <label>  "France"@en .
+<nationality/fær> a <Nationality> ;
+  <label>  "Færøyene"@no ;
+  <label>  "Faroe islands"@en .
+<nationality/gabon> a <Nationality> ;
+  <label>  "Gabon"@no ;
+  <label>  "Gabon"@en .
+<nationality/gamb> a <Nationality> ;
+  <label>  "Gambia"@no ;
+  <label>  "Gambia"@en .
+<nationality/gas> a <Nationality> ;
+  <label>  "Madagaskar"@no ;
+  <label>  "Madagascar"@en .
+<nationality/georg> a <Nationality> ;
+  <label>  "Georgia"@no ;
+  <label>  "Georgia"@en .
+<nationality/ghan> a <Nationality> ;
+  <label>  "Ghana"@no ;
+  <label>  "Ghana"@en .
+<nationality/gr> a <Nationality> ;
+  <label>  "Hellas"@no ;
+  <label>  "Greece"@en .
+<nationality/grenad> a <Nationality> ;
+  <label>  "Grenada"@no ;
+  <label>  "Grenada"@en .
+<nationality/grønl> a <Nationality> ;
+  <label>  "Grønland"@no ;
+  <label>  "Greenland"@en .
+<nationality/guadel> a <Nationality> ;
+  <label>  "Guadeloupe"@no ;
+  <label>  "Guadeloupe"@en .
+<nationality/guatem> a <Nationality> ;
+  <label>  "Guatemala"@no ;
+  <label>  "Guatemala"@en .
+<nationality/guin> a <Nationality> ;
+  <label>  "Guinea"@no ;
+  <label>  "Guinea"@en .
+<nationality/guineab> a <Nationality> ;
+  <label>  "Guinea-Bissau"@no ;
+  <label>  "Guinea-Bissau"@en .
+  <nationality/guyan> a <Nationality> ;
+  <label>  "Guyana"@no ;
+  <label>  "Guyana"@en .
+<nationality/hait> a <Nationality> ;
+  <label>  "Haiti"@no ;
+  <label>  "Haiti"@en .
+<nationality/hond> a <Nationality> ;
+  <label>  "Honduras"@no ;
+  <label>  "Honduras"@en .
+<nationality/hviter> a <Nationality> ;
+  <label>  "Hviterussland"@no ;
+  <label>  "Belarus"@en .
+<nationality/ind> a <Nationality> ;
+  <label>  "India"@no ;
+  <label>  "India"@en .
+<nationality/indian> a <Nationality> ;
+  <label>  "Indiansk"@no ;
+  <label>  "Native American"@en .
+<nationality/indon> a <Nationality> ;
+  <label>  "Indonesia"@no ;
+  <label>  "Indonesia"@en .
+<nationality/inuit> a <Nationality> ;
+  <label>  "Inuittisk"@no ;
+  <label>  "Inuit"@en .
+<nationality/ir> a <Nationality> ;
+  <label>  "Irland"@no ;
+  <label>  "Ireland"@en .
+<nationality/irak> a <Nationality> ;
+  <label>  "Irak"@no ;
+  <label>  "Iraq"@en .
+<nationality/iran> a <Nationality> ;
+  <label>  "Iran"@no ;
+  <label>  "Iran"@en .
+<nationality/isl> a <Nationality> ;
+  <label>  "Island"@no ;
+  <label>  "Iceland"@en .
+<nationality/isr> a <Nationality> ;
+  <label>  "Israel"@no ;
+  <label>  "Israel"@en .
+<nationality/it> a <Nationality> ;
+  <label>  "Italia"@no ;
+  <label>  "Italy"@en .
+<nationality/ivor> a <Nationality> ;
+  <label>  "Elfenbenskysten"@no ;
+  <label>  "Ivory Coast"@en .
+  <nationality/jam> a <Nationality> ;
+  <label>  "Jamaica"@no ;
+  <label>  "Jamaica"@en .
+<nationality/jap> a <Nationality> ;
+  <label>  "Japan"@no ;
+  <label>  "Japan"@en .
+<nationality/jord> a <Nationality> ;
+  <label>  "Jordan"@no ;
+  <label>  "Jordan"@en .
+<nationality/jug> a <Nationality> ;
+  <label>  "Jugoslavia"@no ;
+  <label>  "Yugoslavia"@en .
+<nationality/kamb> a <Nationality> ;
+  <label>  "Kambodsja"@no ;
+  <label>  "Cambodia"@en .
+<nationality/kamer> a <Nationality> ;
+  <label>  "Kamerun"@no ;
+  <label>  "Cameroon"@en .
+  <nationality/kan> a <Nationality> ;
+  <label>  "Canada"@no ;
+  <label>  "Canada"@en .
+<nationality/kappverd> a <Nationality> ;
+  <label>  "Kapp Verde"@no ;
+  <label>  "Cape Verde"@en .
+<nationality/kas> a <Nationality> ;
+  <label>  "Kasakhstan"@no ;
+  <label>  "Kazakhstan"@en .
+<nationality/ken> a <Nationality> ;
+  <label>  "Kenya"@no ;
+  <label>  "Kenya"@en .
+<nationality/kin> a <Nationality> ;
+  <label>  "Kina"@no ;
+  <label>  "China"@en .
+<nationality/kirg> a <Nationality> ;
+  <label>  "Kirgisistan"@no ;
+  <label>  "Kyrgyzstan"@en .
+<nationality/komor> a <Nationality> ;
+  <label>  "Komorene"@no ;
+  <label>  "Comoros"@en .
+<nationality/kongol> a <Nationality> ;
+  <label>  "Den demokratiske republikken Kongo"@no ;
+  <label>  "Democratic Republic of the Congo"@en .
+<nationality/kongolbraz> a <Nationality> ;
+  <label>  "Republikken Kongo"@no ;
+  <label>  "Republic of the Kongo"@en .
+<nationality/kor> a <Nationality> ;
+  <label>  "Korea"@no ;
+  <label>  "Korea"@en .
+<nationality/kosov> a <Nationality> ;
+  <label>  "Kosovo"@no ;
+  <label>  "Kosovo"@en .
+<nationality/kroat> a <Nationality> ;
+  <label>  "Kroatia"@no ;
+  <label>  "Croatia"@en .
+<nationality/kurd> a <Nationality> ;
+  <label>  "Kurdisk"@no ;
+  <label>  "Kurd"@en .
+<nationality/kuw> a <Nationality> ;
+  <label>  "Kuwait"@no ;
+  <label>  "Kuwait"@en .
+<nationality/kypr> a <Nationality> ;
+  <label>  "Kypros"@no ;
+  <label>  "Cyprus"@en .
+<nationality/lank> a <Nationality> ;
+  <label>  "Sri Lanka"@no ;
+  <label>  "Sri Lanka"@en .
+<nationality/laot> a <Nationality> ;
+  <label>  "Laos"@no ;
+  <label>  "Laos"@en .
+<nationality/latv> a <Nationality> ;
+  <label>  "Latvia"@no ;
+  <label>  "Latvia"@en .
+<nationality/lesot> a <Nationality> ;
+  <label>  "Lesotho"@no ;
+  <label>  "Lesotho"@en .
+<nationality/liban> a <Nationality> ;
+  <label>  "Libanon"@no ;
+  <label>  "Lebanon"@en .
+<nationality/liber> a <Nationality> ;
+  <label>  "Liberia"@no ;
+  <label>  "Liberia"@en .
+<nationality/liby> a <Nationality> ;
+  <label>  "Libya"@no ;
+  <label>  "Libya"@en .
+<nationality/liecht> a <Nationality> ;
+  <label>  "Liechtenstein"@no ;
+  <label>  "Liechtenstein"@en .
+<nationality/lit> a <Nationality> ;
+  <label>  "Litauen"@no ;
+  <label>  "Lithuania"@en .
+<nationality/lux> a <Nationality> ;
+  <label>  "Luxembourg"@no ;
+  <label>  "Luxembourg"@en .
+<nationality/maked> a <Nationality> ;
+  <label>  "Makedonia"@no ;
+  <label>  "Macedonia"@en .
+<nationality/malaw> a <Nationality> ;
+  <label>  "Malawi"@no ;
+  <label>  "Malawi"@en .
+<nationality/malay> a <Nationality> ;
+  <label>  "Malaysia"@no ;
+  <label>  "Malaysia"@en .
+<nationality/mali> a <Nationality> ;
+  <label>  "Mali"@no ;
+  <label>  "Mali"@en .
+<nationality/malt> a <Nationality> ;
+  <label>  "Malta"@no ;
+  <label>  "Malta"@en .
+<nationality/maori> a <Nationality> ;
+  <label>  "Maori"@no ;
+  <label>  "Maori"@en .
+<nationality/marok> a <Nationality> ;
+  <label>  "Marokko"@no ;
+  <label>  "Morocco"@en .
+<nationality/martinik> a <Nationality> ;
+  <label>  "Martinique"@no ;
+  <label>  "Martiniquan"@en .
+<nationality/mauret> a <Nationality> ;
+  <label>  "Mauritania"@no ;
+  <label>  "Mauritania"@en .
+<nationality/maurit> a <Nationality> ;
+  <label>  "Mauritius"@no ;
+  <label>  "Mauritius"@en .
+<nationality/mesop> a <Nationality> ;
+  <label>  "Mesopotamisk"@no ;
+  <label>  "Mesopotamian"@en .
+<nationality/mex> a <Nationality> ;
+  <label>  "Mexico"@no ;
+  <label>  "Mexico"@en .
+<nationality/mold> a <Nationality> ;
+  <label>  "Moldovia"@no ;
+  <label>  "Moldovia"@en .
+<nationality/moneg> a <Nationality> ;
+  <label>  "Monaco"@no ;
+  <label>  "Monaco"@en .
+<nationality/mong> a <Nationality> ;
+  <label>  "Mongolia"@no ;
+  <label>  "Mongolia"@en .
+<nationality/montenegr> a <Nationality> ;
+  <label>  "Montenegro"@no ;
+  <label>  "Montenegro"@en .
+<nationality/mosam> a <Nationality> ;
+  <label>  "Mosambik"@no ;
+  <label>  "Mozambique"@en .
+<nationality/n> a <Nationality> ;
+  <label>  "Norge"@no ;
+  <label>  "Norway"@en .
+<nationality/namib> a <Nationality> ;
+  <label>  "Namibia"@no ;
+  <label>  "Namibia"@en .
+<nationality/ned> a <Nationality> ;
+  <label>  "Nederland"@no ;
+  <label>  "The Netherlands"@en .
+<nationality/nep> a <Nationality> ;
+  <label>  "Nepal"@no ;
+  <label>  "Nepal"@en .
+<nationality/newzeal> a <Nationality> ;
+  <label>  "New Zealand"@no ;
+  <label>  "New Zealand"@en .
+<nationality/nicarag> a <Nationality> ;
+  <label>  "Nicaragua"@no ;
+  <label>  "Nicaragua"@en .
+<nationality/nig> a <Nationality> ;
+  <label>  "Niger"@no ;
+  <label>  "Niger"@en .
+<nationality/niger> a <Nationality> ;
+  <label>  "Nigeria"@no ;
+  <label>  "Nigeria"@en .
+<nationality/nordir> a <Nationality> ;
+  <label>  "Nord-Irland"@no ;
+  <label>  "Northern Ireland"@en .
+<nationality/nordkor> a <Nationality> ;
+  <label>  "Nord-Korea"@no ;
+  <label>  "North Korea"@en .
+<nationality/om> a <Nationality> ;
+  <label>  "Oman"@no ;
+  <label>  "Oman"@en .
+<nationality/pak> a <Nationality> ;
+  <label>  "Pakistan"@no ;
+  <label>  "Pakistan"@en .
+<nationality/pal> a <Nationality> ;
+  <label>  "Palestina"@no ;
+  <label>  "Palestine"@en .
+<nationality/panam> a <Nationality> ;
+  <label>  "Panama"@no ;
+  <label>  "Panama"@en .
+<nationality/pap> a <Nationality> ;
+  <label>  "Papua Ny-Guinea"@no ;
+  <label>  "Papua New Guinea"@en .
+<nationality/parag> a <Nationality> ;
+  <label>  "Paraguay"@no ;
+  <label>  "Paraguay"@en .
+<nationality/pers> a <Nationality> ;
+  <label>  "Persisk"@no ;
+  <label>  "Persian"@en .
+<nationality/peru> a <Nationality> ;
+  <label>  "Peru"@no ;
+  <label>  "Peru"@en .
+<nationality/pol> a <Nationality> ;
+  <label>  "Polen"@no ;
+  <label>  "Poland"@en .
+<nationality/portug> a <Nationality> ;
+  <label>  "Portugal"@no ;
+  <label>  "Portugal"@en .
+<nationality/puert> a <Nationality> ;
+  <label>  "Puerto Rico"@no ;
+  <label>  "Puerto Rico"@en .
+<nationality/qat> a <Nationality> ;
+  <label>  "Qatar"@no ;
+  <label>  "Qatar"@en .
+<nationality/r> a <Nationality> ;
+  <label>  "Russland"@no ;
+  <label>  "Russia"@en .
+<nationality/rom> a <Nationality> ;
+  <label>  "Romersk"@no ;
+  <label>  "Roman"@en .
+<nationality/rum> a <Nationality> ;
+  <label>  "Romania"@no ;
+  <label>  "Romania"@en .
+<nationality/rwand> a <Nationality> ;
+  <label>  "Rwanda"@no ;
+  <label>  "Rwanda"@en .
+<nationality/salvad> a <Nationality> ;
+  <label>  "El Salvador"@no ;
+  <label>  "El Salvador"@en .
+<nationality/sam> a <Nationality> ;
+  <label>  "Samisk"@no ;
+  <label>  "Sami"@en .
+<nationality/samoan> a <Nationality> ;
+  <label>  "Samoa"@no ;
+  <label>  "Samoa"@en .
+<nationality/sanktluc> a <Nationality> ;
+  <label>  "Sankt Lucia"@no ;
+  <label>  "Saint Lucia"@en .
+<nationality/saudiarab> a <Nationality> ;
+  <label>  "Saudi-Arabia"@no ;
+  <label>  "Saudi Arabia"@en .
+<nationality/senegal> a <Nationality> ;
+  <label>  "Senegal"@no ;
+  <label>  "Senegal"@en .
+<nationality/serb> a <Nationality> ;
+  <label>  "Serbia"@no ;
+  <label>  "Serbia"@en .
+<nationality/sierral> a <Nationality> ;
+  <label>  "Sierra Leone"@no ;
+  <label>  "Sierra Leone"@en .
+<nationality/sk> a <Nationality> ;
+  <label>  "Skottland"@no ;
+  <label>  "Scotland"@en .
+<nationality/slovak> a <Nationality> ;
+  <label>  "Slovakia"@no ;
+  <label>  "Slovakia"@en .
+<nationality/sloven> a <Nationality> ;
+  <label>  "Slovenia"@no ;
+  <label>  "Slovenia"@en .
+<nationality/somal> a <Nationality> ;
+  <label>  "Somalia"@no ;
+  <label>  "Somalia"@en .
+<nationality/sp> a <Nationality> ;
+  <label>  "Spania"@no ;
+  <label>  "Spain"@en .
+<nationality/sudan> a <Nationality> ;
+  <label>  "Sudan"@no ;
+  <label>  "Sudan"@en .
+<nationality/surin> a <Nationality> ;
+  <label>  "Surinam"@no ;
+  <label>  "Suriname"@en .
+<nationality/sv> a <Nationality> ;
+  <label>  "Sverige"@no ;
+  <label>  "Sweden"@en .
+<nationality/sveits> a <Nationality> ;
+  <label>  "Sveits"@no ;
+  <label>  "Switzerland"@en .
+<nationality/swazil> a <Nationality> ;
+  <label>  "Swaziland"@no ;
+  <label>  "Swaziland"@en .
+<nationality/syr> a <Nationality> ;
+  <label>  "Syria"@no ;
+  <label>  "Syria"@en .
+<nationality/sørafr> a <Nationality> ;
+  <label>  "Sør-Afrika"@no ;
+  <label>  "South Africa"@en .
+<nationality/sørkor> a <Nationality> ;
+  <label>  "Sør-Korea"@no ;
+  <label>  "South Korea"@en .
+<nationality/sørsudan> a <Nationality> ;
+  <label>  "Sør-Sudan"@no ;
+  <label>  "South Sudan"@en .
+<nationality/t> a <Nationality> ;
+  <label>  "Tyskland"@no ;
+  <label>  "Germany"@en .
+<nationality/tadsj> a <Nationality> ;
+  <label>  "Tadsjikistan"@no ;
+  <label>  "Tajikistan"@en .
+<nationality/tahit> a <Nationality> ;
+  <label>  "Tahiti"@no ;
+  <label>  "Tahiti"@en .
+<nationality/taiw> a <Nationality> ;
+  <label>  "Taiwan"@no ;
+  <label>  "Taiwan"@en .
+<nationality/tanz> a <Nationality> ;
+  <label>  "Tanzania"@no ;
+  <label>  "Tanzania"@en .
+<nationality/tchad> a <Nationality> ;
+  <label>  "Tchad"@no ;
+  <label>  "Chad"@en .
+<nationality/th> a <Nationality> ;
+  <label>  "Thailand"@no ;
+  <label>  "Thailand"@en .
+<nationality/tib> a <Nationality> ;
+  <label>  "Tibet"@no ;
+  <label>  "Tibet"@en .
+<nationality/togo> a <Nationality> ;
+  <label>  "Togo"@no ;
+  <label>  "Togo"@en .
+<nationality/trinid> a <Nationality> ;
+  <label>  "Trinid og Tobago"@no ;
+  <label>  "Trinidad and Tobago"@en .
+<nationality/tsj> a <Nationality> ;
+  <label>  "Tsjekkia"@no ;
+  <label>  "Czech Republic"@en .
+<nationality/tsjet> a <Nationality> ;
+  <label>  "Tsjetsjenia"@no ;
+  <label>  "Chechnya"@en .
+<nationality/tun> a <Nationality> ;
+  <label>  "Tunisia"@no ;
+  <label>  "Tunisia"@en .
+<nationality/turkm> a <Nationality> ;
+  <label>  "Turkmenistan"@no ;
+  <label>  "Turkmenistan"@en .
+<nationality/tyrk> a <Nationality> ;
+  <label>  "Tyrkia"@no ;
+  <label>  "Turkey"@en .
+<nationality/ugand> a <Nationality> ;
+  <label>  "Uganda"@no ;
+  <label>  "Uganda"@en .
+<nationality/ukr> a <Nationality> ;
+  <label>  "Ukraina"@no ;
+  <label>  "Ukraine"@en .
+<nationality/ung> a <Nationality> ;
+  <label>  "Ungarn"@no ;
+  <label>  "Hungary"@en .
+<nationality/urug> a <Nationality> ;
+  <label>  "Uruguay"@no ;
+  <label>  "Uruguay"@en .
+<nationality/usb> a <Nationality> ;
+  <label>  "Usbekistan"@no ;
+  <label>  "Uzbekistan"@en .
+<nationality/venez> a <Nationality> ;
+  <label>  "Venezuela"@no ;
+  <label>  "Venezuela"@en .
+<nationality/viet> a <Nationality> ;
+  <label>  "Vietnam"@no ;
+  <label>  "Vietnam"@en .
+<nationality/wal> a <Nationality> ;
+  <label>  "Wales"@no ;
+  <label>  "Wales"@en .
+<nationality/yemen> a <Nationality> ;
+  <label>  "Jemen"@no ;
+  <label>  "Yemen"@en .
+<nationality/zair> a <Nationality> ;
+  <label>  "Zaïre"@no ;
+  <label>  "Zaire"@en .
+<nationality/zamb> a <Nationality> ;
+  <label>  "Zambia"@no ;
+  <label>  "Zambia"@en .
+<nationality/zimb> a <Nationality> ;
+  <label>  "Zimbabwe"@no ;
+  <label>  "Zimbabwe"@en .
+<nationality/øst> a <Nationality> ;
+  <label>  "Østerrike"@no ;
+  <label>  "Austria"@en .
+<nationality/storbr> a <Nationality> ;
+  <label>  "Storbritannia"@no ;
+  <label>  "United Kingdom"@en .
+<nationality/cshh> a <Nationality> ;
+  <label>  "Tsjekkoslovakia"@no ;
+  <label>  "Czechoslovakia"@en .
+<nationality/suhh> a <Nationality> ;
+  <label>  "Sovjetunionen"@no ;
+  <label>  "Soviet Union"@en .
+<nationality/ddde> a <Nationality> ;
+  <label>  "Øst-Tyskland (DDR)"@no ;
+  <label>  "East Germany (GDR)"@en .
+
+<relationType/partOf> a <RelationType> ;
+  <label> "Del av"@no ;
+  <label> "Part of"@en .
+<relationType/relatedWork> a <RelationType> ;
+  <label> "Relatert til"@no ;
+  <label> "Related to"@en .
+<relationType/continuationOf> a <RelationType> ;
+  <label> "Fortsettelse av"@no ;
+  <label> "Continuation of"@en .
+<relationType/continuedIn> a <RelationType> ;
+  <label> "Fortsettes i"@no ;
+  <label> "Continued in"@en .
+
+<role/author> a <Role>;
+  <label> "Forfatter"@no ;
+  <label> "Author"@en .
+<role/translator> a <Role>;
+  <label> "Oversetter"@no ;
+  <label> "Translator"@en .
+<role/illustrator> a <Role>;
+  <label> "Illustratør"@no ;
+  <label> "Illustrator"@en .
+<role/photographer> a <Role>;
+  <label> "Fotograf"@no ;
+  <label> "Photographer"@en .
+<role/editor> a <Role>;
+  <label> "Redaktør"@no ;
+  <label> "Editor"@en .
+<role/contributor> a <Role>;
+  <label> "Bidragsyter"@no ;
+  <label> "Contributor"@en .
+<role/reader> a <Role>;
+  <label> "Innleser"@no ;
+  <label> "Reader"@en .
+<role/publisher> a <Role>;
+  <label> "Utgiver"@no ;
+  <label> "Publisher"@en .
+<role/adaptor> a <Role>;
+  <label> "Bearbeider"@no ;
+  <label> "Adaptor"@en .
+<role/director> a <Role>;
+  <label> "Regissør"@no ;
+  <label> "Director"@en .
+<role/actor> a <Role>;
+  <label> "Skuespiller"@no ;
+  <label> "Actor"@en .
+<role/scriptWriter> a <Role>;
+  <label> "Manusforfatter"@no ;
+  <label> "Script writer"@en .
+<role/composer> a <Role>;
+  <label> "Komponist"@no ;
+  <label> "Composer"@en .
+<role/performer> a <Role>;
+  <label> "Utøver"@no ;
+  <label> "Performer"@en .
+<role/lyricist> a <Role>;
+  <label> "Tekstforfatter"@no ;
+  <label> "Lyricist"@en .
+<role/musicalArranger> a <Role>;
+  <label> "Arrangør"@no ;
+  <label> "Musical arranger"@en .
+<role/conductor> a <Role>;
+  <label> "Dirigent"@no ;
+  <label> "Conductor"@en .
+<role/coreographer> a <Role>;
+  <label> "Koreograf"@no ;
+  <label> "Coreographer"@en .
+<role/producer> a <Role>;
+  <label> "Produsent"@no ;
+  <label> "Producer"@en .
+<role/productionCompany> a <Role>;
+  <label> "Produksjonsselskap"@no ;
+  <label> "Production company"@en .
+<role/featuring> a <Role>;
+  <label> "Medvirkende"@no ;
+  <label> "Featuring"@en .
+
+<workType/Literature> a <WorkType> ;
+  <label> "Litteratur"@no ;
+  <label> "Literature"@en .
+<workType/Film> a <WorkType> ;
+  <label> "Film"@no ;
+  <label> "Film"@en .
+<workType/Music> a <WorkType> ;
+  <label> "Musikk"@no ;
+  <label> "Music"@en .
+<workType/Game> a <WorkType> ;
+  <label> "Spill"@no ;
+  <label> "Game"@en .
+<workType/Other> a <WorkType> ;
+  <label> "Andre"@no ;
+  <label> "Other"@en .
+<workType/Superwork> a <WorkType> ;
+  <label> "Overordnet verk"@no ;
+  <label> "Superwork"@en .
+
+<writingSystem/cyrillic> a <WritingSystem> ;
+  <label> "Kyrillisk"@no ;
+  <label> "Cyrillic"@en .
+<writingSystem/japanese> a <WritingSystem> ;
+  <label> "Japansk"@no ;
+  <label> "Japanese"@en .
+<writingSystem/chinese> a <WritingSystem> ;
+  <label> "Kinesisk"@no ;
+  <label> "Chinese"@en .
+<writingSystem/simplified_chinese> a <WritingSystem>;
+  <label> "Kinesisk, forenklet"@no ;
+  <label> "Chinese, simplified"@en .
+<writingSystem/arabic> a <WritingSystem> ;
+  <label> "Arabisk"@no ;
+  <label> "Arabic"@en .
+<writingSystem/greek> a <WritingSystem> ;
+  <label> "Gresk"@no ;
+  <label> "Greek"@en .
+<writingSystem/hebrew> a <WritingSystem> ;
+  <label> "Hebraisk"@no ;
+  <label> "Hebrew"@en .
+<writingSystem/thai> a <WritingSystem> ;
+  <label> "Thai"@no ;
+  <label> "Thai"@en .
+<writingSystem/devanagari> a <WritingSystem> ;
+  <label> "Devanagari"@no ;
+  <label> "Devanagari"@en .
+<writingSystem/korean> a <WritingSystem> ;
+  <label> "Koreansk"@no ;
+  <label> "Korean"@en .
+<writingSystem/tamil> a <WritingSystem> ;
+  <label> "Tamil"@no ;
+  <label> "Tamil"@en .
+<writingSystem/armenian> a <WritingSystem> ;
+  <label> "Armensk"@no ;
+  <label> "Armenian"@en .
+<writingSystem/bengali> a <WritingSystem> ;
+  <label> "Bengali"@no ;
+  <label> "Bengali"@en .
+<writingSystem/burmese> a <WritingSystem> ;
+  <label> "Burmesisk"@no ;
+  <label> "Burmese"@en .
+<writingSystem/geez> a <WritingSystem> ;
+  <label> "Ge'ez"@no ;
+  <label> "Ge'ez"@en .
+<writingSystem/georgian> a <WritingSystem> ;
+  <label> "Georgisk"@no ;
+  <label> "Georgian"@en .
+<writingSystem/latin> a <WritingSystem> ;
+  <label> "Latinsk"@no ;
+  <label> "Latin"@en .
