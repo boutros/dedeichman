@@ -1,0 +1,57 @@
+
+SELECT ?class, COUNT(DISTINCT ?r) AS ?n
+FROM <old_decihman>
+WHERE {
+ ?r a ?class
+} GROUP BY ?class
+ORDER BY DESC(?n)
+
+class                                                   n
+http://data.deichman.no/ontology#PublicationPart        1216160
+http://data.deichman.no/ontology#Contribution           1164976
+http://data.deichman.no/ontology#MainEntry              582582
+http://data.deichman.no/ontology#ClassificationEntry    465538
+http://data.deichman.no/ontology#Work                   350161
+http://data.deichman.no/ontology#Publication            343599
+http://data.deichman.no/ontology#Person                 187058
+http://migration.deichman.no/AddedAgentEntry            152167
+http://data.deichman.no/ontology#SerialIssue            134880
+http://data.deichman.no/ontology#WorkRelation           34508
+http://migration.deichman.no/SeriesEntry                34100
+http://migration.deichman.no/SubjectAuthorityM650       28879
+http://migration.deichman.no/SubjectAuthorityM699       28273
+http://migration.deichman.no/agentTitleEntry            24408
+http://data.deichman.no/ontology#Instrumentation        20368
+http://data.deichman.no/ontology#Corporation            19064
+http://data.deichman.no/ontology#Serial                 16130
+http://data.deichman.no/ontology#Subject                15098
+http://migration.deichman.no/SubjectAuthorityM600       14823
+http://data.deichman.no/ontology#WorkSeriesPart         8904
+http://migration.deichman.no/WorkAuthority              4023
+http://migration.deichman.no/SubjectAuthorityM610       3839
+http://migration.deichman.no/SubjectAuthorityM651       3444
+http://migration.deichman.no/SubjectAuthorityM691       3242
+http://data.deichman.no/ontology#Place                  2991
+http://migration.deichman.no/SubjectAuthorityM692       2930
+http://migration.deichman.no/SubjectAuthorityM690       2545
+http://migration.deichman.no/Work                       2273
+http://migration.deichman.no/GenreSplit                 1898
+http://data.deichman.no/ontology#CompositionType        1285
+http://migration.deichman.no/GenreAuthorityM655         1221
+http://data.deichman.no/ontology#WorkSeries             863
+http://migration.deichman.no/GenreAuthorityM693         677
+http://data.deichman.no/ontology#Genre                  429
+http://migration.deichman.no/SubjectAuthorityM694       379
+http://migration.deichman.no/SubjectAuthorityM630       309
+http://data.deichman.no/ontology#Event                  241
+http://migration.deichman.no/SubjectAuthorityM653       169
+http://migration.deichman.no/ConstructedWork            159
+http://migration.deichman.no/SubjectAuthorityM611       112
+http://data.deichman.no/ontology#Instrument             56
+
+
+DEFINE sql:describe-mode "CBD"
+DESCRIBE ?r WHERE {
+ ?r a <http://data.deichman.no/ontology#Instrument>
+}
+
