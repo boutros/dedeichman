@@ -1696,3 +1696,13 @@
 <writingSystem/latin> a <WritingSystem> ;
   <label> "Latinsk"@no ;
   <label> "Latin"@en .
+
+<gender/male> a <Gender> ;
+  <label> "Hannkjønn"@no ;
+  <label> "Male"@en .
+<gender/female> a <Gender> ;
+  <label> "Hunnkjønn"@no ;
+  <label> "Female"@en .
+<gender/other> a <Gender> ;
+  <label> "Annet"@no ;
+  <label> "Other"@en .

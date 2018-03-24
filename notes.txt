@@ -52,6 +52,56 @@ http://data.deichman.no/ontology#Instrument             56
 
 DEFINE sql:describe-mode "CBD"
 DESCRIBE ?r WHERE {
- ?r a <http://data.deichman.no/ontology#Instrument>
+ ?r a <http://data.deichman.no/ontology#Person>
 }
 
+
+PREFIX deich: <http://data.deichman.no/ontology#>
+SELECT ?gender, COUNT(DISTINCT ?r) AS ?n
+
+WHERE {
+ ?r a deich:Person ;
+	deich:gender ?gender
+} GROUP BY ?gender
+ORDER BY DESC(?n)
+
+
+PREFIX deich: <http://data.deichman.no/ontology#>
+INSERT {
+	GRAPH <new_deichman> {
+		?np a <Person> ;
+			<name> ?name ;
+			<gender> ?gender ;
+			<altName> ?altName ;
+			<ordinal> ?ordinal ;
+			<specification> ?specification ;
+			<birthYear> ?birthYear ;
+			<deathYear> ?deathYear ;
+			<nationality> ?nationality .
+	}
+} WHERE {
+	GRAPH <old_deichman> {
+		?p a deich:Person ;
+		deich:name ?name .
+		BIND(IRI(STRAFTER(STR(?p), "http://data.deichman.no/")) AS ?np)
+		OPTIONAL { ?p deich:gender ?genderStr
+				   VALUES (?genderStr ?gender) {
+						  ("Mann"   <gender/male>)
+						  ("m"      <gender/male>)
+						  ("M"      <gender/male>)
+						  ("mann"   <gender/male>)
+						  ("Mann."  <gender/male>)
+						  ("Kv."    <gender/male>)
+						  ("Kvinne" <gender/female>)
+						  ("F"      <gender/female>)
+						  ("kvinne" <gender/female>)
+				   }
+				  }
+		OPTIONAL { ?p deich:ordinal ?ordinal }
+		OPTIONAL { ?p deich:alternativeName ?altName }
+		OPTIONAL { ?p deich:specification ?specification }
+		OPTIONAL { ?p deich:birthYear ?birthYear }
+		OPTIONAL { ?p deich:deathYear ?deathYear }
+		OPTIONAL { ?p deich:nationality ?nationality }
+	}
+}

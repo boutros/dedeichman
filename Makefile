@@ -1,6 +1,6 @@
 .PHONY: clean_virtuoso import transform
 
-all: transform
+all: construct
 
 define clear_graph
 	docker exec -i virtuoso bash -c "cd /data && echo -e \"log_enable(3,1);\nSPARQL DROP SILENT GRAPH <$(1)>;\ncheckpoint;\" | isql"
@@ -33,4 +33,7 @@ import: all.nt.gz clean_virtuoso
 	docker cp ./resources.ttl virtuoso:/data/
 	$(call import_graph,resources.ttl,new_deichman)
 
-transform: import
+construct: import
+
+person.nt
+	time go run construct.go > person.nt
