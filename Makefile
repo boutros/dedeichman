@@ -35,5 +35,8 @@ import: all.nt.gz clean_virtuoso
 
 construct: import
 
-person.nt
-	time go run construct.go > person.nt
+person.nt:
+	time go run construct.go person > person.nt
+
+place.nt:
+	time go run construct.go place > place.nt

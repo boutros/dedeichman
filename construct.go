@@ -67,6 +67,23 @@ CONSTRUCT {
 	OPTIONAL { {{.Old}} deich:nationality ?nationality }
 }
 
+
+# tag: constructPlace
+PREFIX deich: <http://data.deichman.no/ontology#>
+WITH <old_deichman>
+CONSTRUCT {
+	{{.New}} a <Place> ;
+		<name> ?name ;
+		<altName> ?altName ;
+		<ordinal> ?ordinal ;
+		<specification> ?specification .
+} WHERE {
+	{{.Old}} a deich:Place ;
+	deich:prefLabel ?name .
+	OPTIONAL { {{.Old}} deich:alternativeName ?altName }
+	OPTIONAL { {{.Old}} deich:specification ?specification }
+
+}
 `
 
 var idcount int32
@@ -119,8 +136,13 @@ func main() {
 		log.Fatal(err)
 	}
 
+	if len(os.Args) < 2 {
+		log.Fatal("usage: construt <class>")
+	}
+	class := strings.Title(os.Args[1])
+
 	q, err := qbank.Prepare(
-		"allByClass", struct{ Class string }{"http://data.deichman.no/ontology#Person"})
+		"allByClass", struct{ Class string }{"http://data.deichman.no/ontology#" + class})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -128,13 +150,20 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	persons := res.Bindings()["uri"]
-	for i, oldP := range persons {
+	entities := res.Bindings()["uri"]
+	for i, oldURI := range entities {
+		tries := 0
+	retry:
 		//newP := rdf.NewNamedNode("person/" + newID())
-		newP := rdf.NewNamedNode(strings.TrimPrefix(oldP.(rdf.NamedNode).Name(), "http://data.deichman.no/"))
+		newURI := rdf.NewNamedNode(strings.TrimPrefix(oldURI.(rdf.NamedNode).Name(), "http://data.deichman.no/"))
 		q, err := qbank.Prepare(
-			"constructPerson", struct{ Old, New rdf.Node }{oldP, newP})
+			"construct"+class, struct{ Old, New rdf.Node }{oldURI, newURI})
 		if err != nil {
+			time.Sleep(1)
+			if tries < 3 {
+				tries++
+				goto retry
+			}
 			log.Fatal(err)
 		}
 		g, err := repo.Construct(q)
@@ -144,7 +173,7 @@ func main() {
 		g.EncodeNTriples(os.Stdout)
 		//fmt.Println(g.Dot(newP, memory.DotOptions{}))
 
-		fmt.Fprintf(os.Stderr, "%d/%d\r", i, len(persons))
+		fmt.Fprintf(os.Stderr, "%d/%d\r", i, len(entities))
 	}
 
 }
