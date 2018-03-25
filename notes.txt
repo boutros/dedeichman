@@ -6,15 +6,15 @@ WHERE {
 } GROUP BY ?class
 ORDER BY DESC(?n)
 
-class                                                   n
-http://data.deichman.no/ontology#PublicationPart        1216160
-http://data.deichman.no/ontology#Contribution           1164976
-http://data.deichman.no/ontology#MainEntry              582582
-http://data.deichman.no/ontology#ClassificationEntry    465538
-http://data.deichman.no/ontology#Work                   350161
-http://data.deichman.no/ontology#Publication            343599
-http://data.deichman.no/ontology#Person                 187058
-http://migration.deichman.no/AddedAgentEntry            152167
+class                                                   n        status
+http://data.deichman.no/ontology#PublicationPart        1216160   ?
+http://data.deichman.no/ontology#Contribution           1164976   +
+http://data.deichman.no/ontology#MainEntry              582582    +
+http://data.deichman.no/ontology#ClassificationEntry    465538    +
+http://data.deichman.no/ontology#Work                   350161    +
+http://data.deichman.no/ontology#Publication            343599    +
+http://data.deichman.no/ontology#Person                 187058    ok
+http://migration.deichman.no/AddedAgentEntry            152167    -
 http://data.deichman.no/ontology#SerialIssue            134880
 http://data.deichman.no/ontology#WorkRelation           34508
 http://migration.deichman.no/SeriesEntry                34100
@@ -24,14 +24,14 @@ http://migration.deichman.no/agentTitleEntry            24408
 http://data.deichman.no/ontology#Instrumentation        20368
 http://data.deichman.no/ontology#Corporation            19064
 http://data.deichman.no/ontology#Serial                 16130
-http://data.deichman.no/ontology#Subject                15098
+http://data.deichman.no/ontology#Subject                15098      -
 http://migration.deichman.no/SubjectAuthorityM600       14823
 http://data.deichman.no/ontology#WorkSeriesPart         8904
 http://migration.deichman.no/WorkAuthority              4023
 http://migration.deichman.no/SubjectAuthorityM610       3839
 http://migration.deichman.no/SubjectAuthorityM651       3444
 http://migration.deichman.no/SubjectAuthorityM691       3242
-http://data.deichman.no/ontology#Place                  2991
+http://data.deichman.no/ontology#Place                  2991       ok
 http://migration.deichman.no/SubjectAuthorityM692       2930
 http://migration.deichman.no/SubjectAuthorityM690       2545
 http://migration.deichman.no/Work                       2273
@@ -40,14 +40,14 @@ http://data.deichman.no/ontology#CompositionType        1285
 http://migration.deichman.no/GenreAuthorityM655         1221
 http://data.deichman.no/ontology#WorkSeries             863
 http://migration.deichman.no/GenreAuthorityM693         677
-http://data.deichman.no/ontology#Genre                  429
+http://data.deichman.no/ontology#Genre                  429         -
 http://migration.deichman.no/SubjectAuthorityM694       379
 http://migration.deichman.no/SubjectAuthorityM630       309
-http://data.deichman.no/ontology#Event                  241
+http://data.deichman.no/ontology#Event                  241         -
 http://migration.deichman.no/SubjectAuthorityM653       169
 http://migration.deichman.no/ConstructedWork            159
 http://migration.deichman.no/SubjectAuthorityM611       112
-http://data.deichman.no/ontology#Instrument             56
+http://data.deichman.no/ontology#Instrument             56          -
 
 
 DEFINE sql:describe-mode "CBD"
@@ -66,42 +66,52 @@ WHERE {
 ORDER BY DESC(?n)
 
 
+
+BIND(IRI(STRAFTER(STR(?p), "http://data.deichman.no/")) AS ?np)
+
 PREFIX deich: <http://data.deichman.no/ontology#>
-INSERT {
-	GRAPH <new_deichman> {
-		?np a <Person> ;
-			<name> ?name ;
-			<gender> ?gender ;
-			<altName> ?altName ;
-			<ordinal> ?ordinal ;
-			<specification> ?specification ;
-			<birthYear> ?birthYear ;
-			<deathYear> ?deathYear ;
-			<nationality> ?nationality .
-	}
-} WHERE {
-	GRAPH <old_deichman> {
-		?p a deich:Person ;
-		deich:name ?name .
-		BIND(IRI(STRAFTER(STR(?p), "http://data.deichman.no/")) AS ?np)
-		OPTIONAL { ?p deich:gender ?genderStr
-				   VALUES (?genderStr ?gender) {
-						  ("Mann"   <gender/male>)
-						  ("m"      <gender/male>)
-						  ("M"      <gender/male>)
-						  ("mann"   <gender/male>)
-						  ("Mann."  <gender/male>)
-						  ("Kv."    <gender/male>)
-						  ("Kvinne" <gender/female>)
-						  ("F"      <gender/female>)
-						  ("kvinne" <gender/female>)
-				   }
-				  }
-		OPTIONAL { ?p deich:ordinal ?ordinal }
-		OPTIONAL { ?p deich:alternativeName ?altName }
-		OPTIONAL { ?p deich:specification ?specification }
-		OPTIONAL { ?p deich:birthYear ?birthYear }
-		OPTIONAL { ?p deich:deathYear ?deathYear }
-		OPTIONAL { ?p deich:nationality ?nationality }
-	}
+CONSTRUCT {
+  ?event <note> ?note .
 }
+WHERE {
+ ?e a <http://data.deichman.no/ontology#Event> ;
+    deich:date ?date .
+ FILTER (!REGEX(?date, "^\\d\\d\\d\\d$"))
+ BIND(IRI(STRAFTER(STR(?e), "http://data.deichman.no/")) AS ?event)
+ BIND(CONCAT("Dato: ", ?date) AS ?note)
+}
+
+<event/e11729600>	<note>	"Dato: 1921-1924" .
+<event/e18150800>	<note>	"Dato: 30. april - 26. mai 1976" .
+<event/e10003000>	<note>	"Dato: 1928 - 1930" .
+<event/e13115900>	<note>	"Dato: 22. -25. november 1976" .
+<event/e10511400>	<note>	"Dato: 1918-1925" .
+<event/e10005500>	<note>	"Dato: 1950-1952" .
+<event/e35727600>	<note>	"Dato: 2006-2007" .
+<event/e24267200>	<note>	"Dato: 1972-1973" .
+<event/v216615579698>	<note>	"Dato: 15.april 2013" .
+<event/e2050193400>	<note>	"Dato: 1911-1914" .
+<event/e25607300>	<note>	"Dato: 23. - 24. september 1980" .
+<event/e10012700>	<note>	"Dato: 1903-07" .
+<event/e15538400>	<note>	"Dato: 1908-14" .
+<event/e10514900>	<note>	"Dato: 1922-23" .
+<event/v617094826310>	<note>	"Dato: 16. februar - 19. mars 2017" .
+<event/v142323051030>	<note>	"Dato: 12.06.2017" .
+<event/e10009200>	<note>	"Dato: 1893-1896" .
+<event/e2050305000>	<note>	"Dato: 1914-1917" .
+<event/e2039158500>	<note>	"Dato: 1906-1908" .
+<event/e2048872700>	<note>	"Dato: 3.-5. april" .
+<event/e15872300>	<note>	"Dato: 17. -19 september 1990" .
+<event/e20050700>	<note>	"Dato: 15.-16.mars 1982" .
+<event/e29710000>	<note>	"Dato: 18. -20. mars 1976" .
+<event/e12743000>	<note>	"Dato: 24. -26. sept.1975" .
+<event/e17001800>	<note>	"Dato: 15.september 1982" .
+<event/e2050505800>	<note>	"Dato: 1955-1958" .
+<event/e20050800>	<note>	"Dato: 15.-16. mars 1982" .
+<event/e31763900>	<note>	"Dato: 1838-1840" .
+<event/e2047723200>	<note>	"Dato: 1962-1965" .
+<event/e10058400>	<note>	"Dato: 1928-1929" .
+<event/e20049700>	<note>	"Dato: 1984-1985" .
+<event/e2041276800>	<note>	"Dato: 23. oktober 2007" .
+<event/v276865264206>	<note>	"Dato: 20. april 2010" .
+<event/e12382200>	<note>	"Dato: 21. januar - 1. mars 1964" .

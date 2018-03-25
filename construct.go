@@ -75,14 +75,34 @@ CONSTRUCT {
 	{{.New}} a <Place> ;
 		<name> ?name ;
 		<altName> ?altName ;
-		<ordinal> ?ordinal ;
 		<specification> ?specification .
 } WHERE {
 	{{.Old}} a deich:Place ;
 	deich:prefLabel ?name .
 	OPTIONAL { {{.Old}} deich:alternativeName ?altName }
 	OPTIONAL { {{.Old}} deich:specification ?specification }
+}
 
+# tag: constructEvent
+PREFIX deich: <http://data.deichman.no/ontology#>
+WITH <old_deichman>
+CONSTRUCT {
+	{{.New}} a <Event> ;
+		<name> ?name ;
+		<altName> ?altName ;
+		<ordinal> ?ordinal ;
+		<year> ?year ;
+		<note> ?note ;
+		<place> ?place ;
+		<specification> ?specification .
+} WHERE {
+	{{.Old}} a deich:Event ;
+	deich:prefLabel ?name .
+	OPTIONAL { {{.Old}} deich:alternativeName ?altName }
+	OPTIONAL { {{.Old}} deich:specification ?specification }
+	OPTIONAL { {{.Old}} deich:date ?dateStr . FILTER REGEX(?dateStr, "^\\d\\d\\d\\d$") . BIND(xsd:integer(?dateStr) AS ?year) }
+	OPTIONAL { {{.Old}} deich:ordinal ?ordinalStr . BIND(xsd:integer(?ordinalStr) AS ?ordinal)}
+	OPTIONAL { {{.Old}} deich:place ?placeOld . BIND(IRI(STRAFTER(STR(?placeOld), "http://data.deichman.no/")) AS ?place) }
 }
 `
 
