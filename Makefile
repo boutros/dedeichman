@@ -33,10 +33,6 @@ import: all.nt.gz clean_virtuoso
 	docker cp ./resources.ttl virtuoso:/data/
 	$(call import_graph,resources.ttl,new_deichman)
 
-construct: import
-
-person.nt:
-	time go run construct.go person > person.nt
-
-place.nt:
-	time go run construct.go place > place.nt
+CLASSES=place event genre subject instrument corporation person
+construct:
+	for class in $(CLASSES); do echo $$class; go run construct.go $$class > $$class.nt; done

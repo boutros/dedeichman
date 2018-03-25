@@ -104,6 +104,68 @@ CONSTRUCT {
 	OPTIONAL { {{.Old}} deich:ordinal ?ordinalStr . BIND(xsd:integer(?ordinalStr) AS ?ordinal)}
 	OPTIONAL { {{.Old}} deich:place ?placeOld . BIND(IRI(STRAFTER(STR(?placeOld), "http://data.deichman.no/")) AS ?place) }
 }
+
+# tag: constructInstrument
+PREFIX deich: <http://data.deichman.no/ontology#>
+WITH <old_deichman>
+CONSTRUCT {
+	{{.New}} a <Instrument> ;
+		<name> ?name ;
+		<altName> ?altName .
+} WHERE {
+	{{.Old}} a deich:Instrument ;
+	deich:prefLabel ?name .
+	OPTIONAL { {{.Old}} deich:alternativeName ?altName }
+}
+
+# tag: constructGenre
+PREFIX deich: <http://data.deichman.no/ontology#>
+WITH <old_deichman>
+CONSTRUCT {
+	{{.New}} a <Genre> ;
+		<name> ?name ;
+		<altName> ?altName ;
+		<specification> ?specification .
+} WHERE {
+	{{.Old}} a deich:Genre ;
+	deich:prefLabel ?name .
+	OPTIONAL { {{.Old}} deich:alternativeName ?altName }
+	OPTIONAL { {{.Old}} deich:specification ?specification }
+}
+
+# tag: constructSubject
+PREFIX deich: <http://data.deichman.no/ontology#>
+WITH <old_deichman>
+CONSTRUCT {
+	{{.New}} a <Subject> ;
+		<name> ?name ;
+		<altName> ?altName ;
+		<specification> ?specification .
+} WHERE {
+	{{.Old}} a deich:Subject ;
+	deich:prefLabel ?name .
+	OPTIONAL { {{.Old}} deich:alternativeName ?altName }
+	OPTIONAL { {{.Old}} deich:specification ?specification }
+}
+
+# tag: constructCorporation
+PREFIX deich: <http://data.deichman.no/ontology#>
+WITH <old_deichman>
+CONSTRUCT {
+	{{.New}} a <Corporation> ;
+		<name> ?name ;
+		<altName> ?altName ;
+		<nationality> ?nationality ;
+		<subdivision> ?subdivision ;
+		<specification> ?specification .
+} WHERE {
+	{{.Old}} a deich:Corporation ;
+	deich:name ?name .
+	OPTIONAL { {{.Old}} deich:alternativeName ?altName }
+	OPTIONAL { {{.Old}} deich:specification ?specification }
+	OPTIONAL { {{.Old}} deich:nationality ?nationality }
+	OPTIONAL { {{.Old}} deich:subdivision ?subdivision }
+}
 `
 
 var idcount int32
