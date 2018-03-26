@@ -6,11 +6,11 @@ import (
 	"log"
 	"os"
 	"strings"
-	"sync/atomic"
 	"time"
 
 	"github.com/knakk/kbp/rdf"
 	"github.com/knakk/kbp/sparql"
+	"github.com/teris-io/shortid"
 )
 
 const queries = `
@@ -19,7 +19,7 @@ SELECT DISTINCT ?uri WHERE {
 	GRAPH <old_deichman> {
 		?uri a <{{.Class}}> .
 	}
-}
+} LIMIT 100
 
 # tag: renameURI
 DELETE { ?s ?p <{{.Old}}> }
@@ -166,51 +166,80 @@ CONSTRUCT {
 	OPTIONAL { {{.Old}} deich:nationality ?nationality }
 	OPTIONAL { {{.Old}} deich:subdivision ?subdivision }
 }
-`
 
-var idcount int32
-
-func newID() string {
-	// base32 encoding alphabet
-	const base32 = "0123456789abcdefghjkmnpqrstvwxyz"
-
-	// Base32-encoding of timestamp taken from github.com/oklog/ulid
-
-	// Get current time in Unix milliseconds:
-	now := time.Now().UTC()
-	ms := uint64(now.Unix())*1000 + uint64(now.Nanosecond()/int(time.Millisecond))
-
-	id := make([]byte, 6)
-	id[0] = byte(ms >> 40)
-	id[1] = byte(ms >> 32)
-	id[2] = byte(ms >> 24)
-	id[3] = byte(ms >> 16)
-	id[4] = byte(ms >> 8)
-	id[5] = byte(ms)
-
-	dst := make([]byte, 12)
-
-	dst[0] = base32[(id[0]&224)>>5]
-	dst[1] = base32[id[0]&31]
-	dst[2] = base32[(id[1]&248)>>3]
-	dst[3] = base32[((id[1]&7)<<2)|((id[2]&192)>>6)]
-	dst[4] = base32[(id[2]&62)>>1]
-	dst[5] = base32[((id[2]&1)<<4)|((id[3]&240)>>4)]
-	dst[6] = base32[((id[3]&15)<<1)|((id[4]&128)>>7)]
-	dst[7] = base32[(id[4]&124)>>2]
-	dst[8] = base32[((id[4]&3)<<3)|((id[5]&224)>>5)]
-	dst[9] = base32[id[5]&31]
-
-	n := atomic.AddInt32(&idcount, 1) % 1024
-	//dst[10] = base32[byte(((n>>16)&124)>>3)]
-	dst[10] = base32[byte(((n>>8)&3<<3)|(n&224>>5))]
-	dst[11] = base32[byte(n)&31]
-
-	return string(dst)
-
+# tag: constructCompositionType
+PREFIX deich: <http://data.deichman.no/ontology#>
+WITH <old_deichman>
+CONSTRUCT {
+	{{.New}} a <CompositionType> ;
+		<name> ?name ;
+		<altName> ?altName ;
+		<specification> ?specification .
+} WHERE {
+	{{.Old}} a deich:CompositionType ;
+	deich:prefLabel ?name .
+	OPTIONAL { {{.Old}} deich:alternativeName ?altName }
+	OPTIONAL { {{.Old}} deich:specification ?specification }
 }
 
+# tag: constructPublication
+PREFIX deich: <http://data.deichman.no/ontology#>
+WITH <old_deichman>
+CONSTRUCT {
+	?np a <Publication> ;
+		<title> ?title ;
+		<subtitle> ?subtitle ;
+		<partTitle> ?partTitle ;
+		<partNumber> ?partNumber ;
+		<isbn> ?isbn ;
+		<manifestationOf> {{.New}} ;
+		<contrib> ?pubContrib .
+	{{.New}} a <Work> ;
+		<subject> ?subject ;
+		<genre> ?genre ;
+		<contrib> ?workContrib .
+	?workContrib a <Contribution>, ?workMainEntry ;
+		<role> ?workContribRole ;
+		<agent> ?workContribAgent .
+	?pubContrib a <Contribution> ;
+		<role> ?pubContribRole ;
+		<agent> ?pubContribAgent .
+} WHERE {
+	{{.Old}} a deich:Publication ;
+	deich:mainTitle ?name ;
+	deich:publicationOf ?work .
+	BIND(IRI(STRAFTER(STR({{.Old}}), "http://data.deichman.no/")) AS ?np)
+	OPTIONAL {
+		?work deich:contributor ?wc .
+		?wc deich:agent ?wAgent ;
+			deich:role ?wRole .
+		OPTIONAL { ?wc a deich:MainEntry . BIND(IRI("MainEntry") AS ?workMainEntry)}
+		BIND(IRI(CONCAT("contrib/", SHA1(CONCAT(?work, ?wAgent, ?wRole, ?workMainEntry)))) AS ?workContrib)
+		BIND(IRI(CONCAT("role/", STRAFTER(STR(?wRole), "http://data.deichman.no/role#"))) AS ?workContribRole)
+		BIND(IRI(STRAFTER(STR(?wAgent), "http://data.deichman.no/")) AS ?workContribAgent)
+	}
+	OPTIONAL {
+		{{.Old}} deich:contributor ?pc .
+		?pc deich:agent ?pAgent ;
+			deich:role ?pRole .
+		BIND(IRI(CONCAT("contrib/", SHA1(CONCAT({{.Old}}, ?pAgent, ?pRole)))) AS ?pubContrib)
+		BIND(IRI(CONCAT("role/", STRAFTER(STR(?pRole), "http://data.deichman.no/role#"))) AS ?pubContribRole)
+		BIND(IRI(STRAFTER(STR(?pAgent), "http://data.deichman.no/")) AS ?pubContribAgent)
+	}
+	OPTIONAL { {{.Old}} deich:subtitle ?subtitle }
+	OPTIONAL { {{.Old}} deich:partTitle ?partTitle }
+	OPTIONAL { {{.Old}} deich:partNumber ?partNumber }
+	OPTIONAL { {{.Old}} deich:isbn ?isbn }
+	OPTIONAL { ?work deich:subject ?subjectTemp . BIND(IRI(STRAFTER(STR(?subjectTemp), "http://data.deichman.no/")) AS ?subject)}
+	OPTIONAL { ?work deich:genre ?genreTemp . BIND(IRI(STRAFTER(STR(?genreTemp), "http://data.deichman.no/")) AS ?genre)}
+}
+`
+
 func main() {
+	sid, err := shortid.New(1, shortid.DefaultABC, 2342)
+	if err != nil {
+		log.Fatal(err)
+	}
 	qbank := sparql.LoadBank(bytes.NewBufferString(queries))
 
 	repo, err := sparql.NewRepo("http://192.168.1.39:8890/sparql-auth", sparql.DigestAuth("dba", "dba"))
@@ -236,8 +265,14 @@ func main() {
 	for i, oldURI := range entities {
 		tries := 0
 	retry:
-		//newP := rdf.NewNamedNode("person/" + newID())
 		newURI := rdf.NewNamedNode(strings.TrimPrefix(oldURI.(rdf.NamedNode).Name(), "http://data.deichman.no/"))
+		if class == "Publication" {
+			id, err := sid.Generate()
+			if err != nil {
+				log.Fatal(err)
+			}
+			newURI = rdf.NewNamedNode("work/" + id)
+		}
 		q, err := qbank.Prepare(
 			"construct"+class, struct{ Old, New rdf.Node }{oldURI, newURI})
 		if err != nil {
@@ -253,9 +288,8 @@ func main() {
 			log.Fatal(err)
 		}
 		g.EncodeNTriples(os.Stdout)
-		//fmt.Println(g.Dot(newP, memory.DotOptions{}))
 
-		fmt.Fprintf(os.Stderr, "%d/%d\r", i, len(entities))
+		fmt.Fprintf(os.Stderr, "%d/%d   \r", i, len(entities))
 	}
 
 }
